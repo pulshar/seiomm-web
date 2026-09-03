@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter Tight", sans-serif;
+  --font-serif: "Fraunces", serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --container-7xl: 1340px;
+
+  --color-seiomm-dark: #0A1220;
+  --color-seiomm-darker: #0A1220;
+  --color-seiomm-body: #4A5567;
+  --color-seiomm-mute: #7A8599;
+  --color-seiomm-cyan: #01A0DA;
+  --color-seiomm-cyan-hover: #0A82AE;
+  --color-seiomm-cyan-on-dark: #93C5FD;
+  --color-seiomm-gray: #F8FAFC;
+  --color-seiomm-10: #e6e7e8;
+  --color-seiomm-8: #ececee;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-seiomm-body antialiased bg-white selection:bg-seiomm-cyan selection:text-white;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+    @apply font-light;
+    @apply tracking-tight;
+    @apply leading-[1.08];
+  }
+}
+
+/* Custom utilities for smooth image scaling on hover */
+@layer utilities {
+  .image-scale-hover {
+    @apply transition-transform duration-700 ease-out group-hover:scale-105;
+  }
+}
+
+@layer components {
+  .link-underline {
+    position: relative;
+  }
+
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 1px;
+    width: 100%;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .link-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
