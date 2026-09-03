@@ -105,12 +105,19 @@ export function Navbar() {
             className={`lg:hidden absolute top-full left-0 w-full shadow-xl ${effectiveIsScrolled ? 'bg-white/99 backdrop-blur-md' : 'bg-seiomm-dark/98 backdrop-blur-md'
               }`}
           >
-            <div className="flex flex-col px-6 py-8 gap-4">
+            <div className="flex flex-col px-6 py-6 gap-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.href}
-                  className={`font-serif text-2xl py-3 border-b ${effectiveIsScrolled ? 'border-seiomm-dark/5 text-seiomm-body hover:text-seiomm-dark' : 'border-white/10 text-white/80 hover:text-white'
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                  className={`font-serif text-xl py-2 border-b ${pathname === link.href
+                    ? effectiveIsScrolled
+                      ? 'border-seiomm-dark/5 text-seiomm-cyan pointer-events-none'
+                      : 'border-white/10 text-seiomm-cyan-on-dark pointer-events-none'
+                    : effectiveIsScrolled
+                      ? 'border-seiomm-dark/5 text-seiomm-body hover:text-seiomm-dark'
+                      : 'border-white/10 text-white/80 hover:text-white'
                     }`}
                 >
                   {link.name}

@@ -66,7 +66,7 @@ export function Footer() {
               <h4 className="text-seiomm-cyan-on-dark font-mono text-xs font-semibold tracking-[0.2em] uppercase">La sociedad</h4>
               <ul className="flex flex-col gap-2">
                 <li><Link to="/quienes-somos" className="text-white/60 hover:text-white text-sm transition-colors">Quiénes somos</Link></li>
-                <li><Link to="/quienes-somos" className="text-white/60 hover:text-white text-sm transition-colors">Junta directiva</Link></li>
+                <li><Link to="/quienes-somos#junta-directiva" className="text-white/60 hover:text-white text-sm transition-colors">Junta directiva</Link></li>
                 <li><Link to="/ciencia" className="text-white/60 hover:text-white text-sm transition-colors">Ciencia e investigación</Link></li>
                 <li><Link to="#" className="text-white/60 hover:text-white text-sm transition-colors">Estatutos</Link></li>
               </ul>

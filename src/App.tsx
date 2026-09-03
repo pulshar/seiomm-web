@@ -10,15 +10,13 @@ import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Congress } from './pages/Congress';
 import { VentajasSocio } from './pages/VentajasSocio';
+import { ScrollToHash } from './components/ScrollToHash';
 
 export default function App() {
   useEffect(() => {
     const lenis = new Lenis({
       anchors: {
         offset: -90,
-        onComplete: () => {
-          console.log("scrolled to anchor");
-        },
       },
     });
 
@@ -55,6 +53,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <ScrollToHash />
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <Routes>
