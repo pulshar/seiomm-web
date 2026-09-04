@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'motion/react';
 
-export function VentajasHero() {
+export function FormacionHero() {
   return (
-    <section className="relative top-[90px] bg-seiomm-gray py-18 md:py-24 lg:py-32 overflow-hidden border-b border-seiomm-8">
+    <section className="relative top-[90px] bg-seiomm-gray py-18 md:py-24 lg:py-32 overflow-hidden border-b border-seiomm-dark/8">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-        {/* Text Content */}
+        {/* Left Column: Text Content */}
         <div className="relative z-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -15,7 +15,7 @@ export function VentajasHero() {
           >
             <span className="w-2 h-2 rounded-full bg-seiomm-cyan" />
             <span className="text-seiomm-mute font-mono text-xs font-semibold tracking-[0.2em] uppercase">
-              ÚNETE A SEIOMM
+              FORMACIÓN
             </span>
           </motion.div>
 
@@ -23,19 +23,21 @@ export function VentajasHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-serif text-seiomm-dark leading-[1.08] tracking-tight mb-8"
+            className="text-4xl md:text-5xl lg:text-6xl font-serif text-seiomm-dark leading-[1.08] tracking-tight mb-8 font-light"
           >
-            Ser socio es hacer ciencia <span className="text-seiomm-cyan">juntos.</span>
+            Aprender para cuidar <span className="text-seiomm-cyan">mejor.</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-seiomm-body text-lg leading-relaxed mb-8 max-w-xl"
+            className="text-seiomm-body text-lg leading-relaxed max-w-xl"
           >
-            Accede a formación especializada, actividades científicas, publicaciones, becas, grupos de trabajo y otras oportunidades para seguir creciendo profesionalmente.          </motion.p>
-
+            En SEIOMM creemos que la formación continua es la base para mejorar la práctica
+            clínica. Cursos, congresos y contenidos actualizados que combinan rigor científico
+            y enfoque práctico.
+          </motion.p>
         </div>
 
         {/* Right Cyan Block */}
@@ -46,22 +48,23 @@ export function VentajasHero() {
           className="relative h-[280px] md:h-[360px] bg-seiomm-cyan p-8 lg:p-12 pb-6 lg:pb-8 flex flex-col justify-end overflow-hidden"
         >
           {/* Subtle Grid Pattern Overlay */}
-          <div className="absolute inset-0 opacity-15 pointer-events-none"
+          <div
+            className="absolute inset-0 opacity-15 pointer-events-none"
             style={{
               backgroundImage:
-                "linear-gradient(rgba(255, 255, 255, 0.9) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.9) 1px, transparent 1px)",
-              backgroundSize: "44px 44px",
-            }}>
-          </div>
+                'linear-gradient(rgba(255, 255, 255, 0.9) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.9) 1px, transparent 1px)',
+              backgroundSize: '44px 44px',
+            }}
+          />
 
-          <div className="relative z-10 text-white -left-[40px]">
+          <div className="relative z-10 text-white -left-[20px] md:-left-[40px]">
             <h2 className="text-8xl md:text-[160px] font-serif tracking-tighter leading-none mb-4 opacity-40 font-normal">
-              +500
+              19
             </h2>
           </div>
           <div className="relative z-10 text-white self-end">
             <p className="font-mono text-xs tracking-widest font-semibold uppercase">
-              Profesionales ya forman parte
+              PONENCIAS EN EL CURSO ONLINE SEIOMM
             </p>
           </div>
         </motion.div>

@@ -14,6 +14,8 @@ const About = lazy(() => import('./pages/About').then((m) => ({ default: m.About
 const Congress = lazy(() => import('./pages/Congress').then((m) => ({ default: m.Congress })));
 const VentajasSocio = lazy(() => import('./pages/VentajasSocio').then((m) => ({ default: m.VentajasSocio })));
 const Ciencia = lazy(() => import('./pages/Ciencia').then((m) => ({ default: m.Ciencia })));
+const Formacion = lazy(() => import('./pages/Formacion').then((m) => ({ default: m.Formacion })));
+const Recursos = lazy(() => import('./pages/Recursos').then((m) => ({ default: m.Recursos })));
 
 // Typed window interface using Omit to cleanly override the ambient lenis definition
 type WindowWithLenis = Omit<Window, 'lenis'> & {
@@ -88,7 +90,10 @@ export default function App() {
             <Route path="/congreso" element={<Congress />} />
             <Route path="/ventajas-socio" element={<VentajasSocio />} />
             <Route path="/ciencia" element={<Ciencia />} />
+            <Route path="/formacion" element={<Formacion />} />
+            <Route path="/recursos" element={<Recursos />} />
           </Routes>
+
 
         </Suspense>
         <Footer />

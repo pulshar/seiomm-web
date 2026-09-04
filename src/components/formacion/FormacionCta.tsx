@@ -3,7 +3,7 @@ import { MoveRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 
-export function CienciaCta() {
+export function FormacionCta() {
   return (
     <section className="py-20 md:py-28 lg:py-32 bg-seiomm-darker border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6">
@@ -19,7 +19,7 @@ export function CienciaCta() {
             >
               <span className="w-2 h-2 rounded-full bg-seiomm-cyan-on-dark" />
               <span className="text-seiomm-mute font-mono text-xs font-semibold tracking-[0.2em] uppercase">
-                INVESTIGA CON SEIOMM
+                PRÓXIMA CITA
               </span>
             </motion.div>
 
@@ -30,8 +30,8 @@ export function CienciaCta() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl md:text-5xl font-serif text-white font-light leading-[1.12]"
             >
-              ¿Investigas en metabolismo óseo?{' '}
-              <span className="text-seiomm-cyan-on-dark">Te ayudamos a avanzar.</span>
+              XXX Congreso Nacional SEIOMM,{' '}
+              <span className="text-seiomm-cyan-on-dark">Murcia 2026.</span>
             </motion.h2>
           </div>
 
@@ -44,17 +44,16 @@ export function CienciaCta() {
             className="flex flex-col gap-8 max-w-md"
           >
             <p className="text-white/80 text-base leading-relaxed">
-              Consulta las convocatorias abiertas de becas y premios FEIOMM/SEIOMM y presenta
-              tu candidatura.
+              Tres días de ciencia en directo del 28 al 30 de octubre de 2026. La edición
+              anterior reunió a la comunidad en Palma de Mallorca.
             </p>
 
             <div className="flex flex-wrap items-center gap-6">
               <Link
-                to="https://seiomm.org/becas-y-premios-seiomm-feiomm-oportunidades-para-investigadores-en-metabolismo-oseo-y-mineral/"
-                target="_blank"
+                to="/congreso"
                 className="group flex items-center gap-2 bg-white text-seiomm-dark text-sm px-6 py-3 rounded-full font-medium hover:bg-seiomm-cyan-on-dark transition-all duration-300"
               >
-                Ver becas y premios
+                Descubre el congreso
                 <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link

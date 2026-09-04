@@ -22,7 +22,7 @@ const becas = [
     title: 'Becas de congreso',
     description:
       'Cinco para investigadores clínicos y cinco para investigadores básicos, destinadas a cubrir la inscripción al Congreso Nacional SEIOMM.',
-    requirement: 'PRIORIDAD A PRIMER FIRMANTE Y SOCIOS MENORES DE 35 AÑOS',
+    requirement: 'PRIORIDAD A PRIMER FIRMANTE Y SOCIOS MENORES DE 35',
   },
 ];
 
@@ -31,7 +31,7 @@ export function BecasSection() {
     <section className="bg-seiomm-gray py-20 md:py-28 lg:py-32 border-b border-seiomm-8">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeader
-          eyebrow="[02] BECAS FEIOMM"
+          eyebrow="BECAS FEIOMM"
           title={
             <>
               Impulso real a <span className="text-seiomm-cyan">la investigación.</span>
@@ -40,7 +40,8 @@ export function BecasSection() {
         />
 
         {/* 3 Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+        <div className="mt-16 grid grid-cols-1 border border-seiomm-10 md:grid-cols-3 md:divide-x md:divide-seiomm-10">
+
           {becas.map((item, idx) => (
             <motion.div
               key={item.title}
@@ -48,11 +49,11 @@ export function BecasSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 * idx }}
-              className="bg-white border border-seiomm-10 p-8 md:p-10 flex flex-col justify-between hover:border-seiomm-cyan/50 hover:shadow-sm transition-all duration-300"
+              className="bg-white p-8 md:p-10 lg:p-12 flex flex-col justify-between hover:bg-seiomm-gray/50 transition-colors duration-300"
             >
               <div>
                 {/* Metric / Highlight */}
-                <div className="text-3xl md:text-4xl font-serif text-seiomm-cyan font-normal mb-6">
+                <div className="text-3xl md:text-4xl font-serif text-seiomm-cyan font-normal tracking-tight mb-6">
                   {item.metric}
                 </div>
 
@@ -69,7 +70,7 @@ export function BecasSection() {
 
               {/* Requirement Footer */}
               <div className="border-t border-seiomm-10 pt-6 mt-8">
-                <span className="font-mono text-[11px] uppercase tracking-wider text-seiomm-mute font-semibold block leading-tight">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-seiomm-mute font-semibold block">
                   {item.requirement}
                 </span>
               </div>

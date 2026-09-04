@@ -37,7 +37,7 @@ export function PremiosSection() {
     <section className="bg-white py-20 md:py-28 lg:py-32 border-b border-seiomm-8">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeader
-          eyebrow="[03] PREMIOS"
+          eyebrow="PREMIOS"
           title={
             <>
               Reconocer la <span className="text-seiomm-cyan">excelencia.</span>
@@ -81,9 +81,9 @@ export function PremiosSection() {
           className="mt-10"
         >
           <Link
-            to="https://seiomm.org/becas-y-premios"
+            to="https://seiomm.org/premios/"
             target="_blank"
-            className="inline-flex items-center gap-2 text-seiomm-dark font-medium text-sm md:text-base link-underline group"
+            className="inline-flex items-center gap-2 text-seiomm-dark font-medium text-sm link-underline group"
           >
             Ver bases y resoluciones de todas las convocatorias
             <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

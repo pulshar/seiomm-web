@@ -41,34 +41,30 @@ export function CienciaHero() {
           </motion.p>
         </div>
 
-        {/* Right Column: Cyan Blueprint Block */}
+        {/* Right Cyan Block */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="relative h-[280px] md:h-[360px] bg-seiomm-cyan p-8 lg:p-12 flex flex-col justify-between overflow-hidden shadow-sm"
+          className="relative h-[280px] md:h-[360px] bg-seiomm-cyan p-8 lg:p-12 pb-6 lg:pb-8 flex flex-col justify-end overflow-hidden"
         >
-          {/* Subtle Blueprint Grid Pattern */}
-          <div
-            className="absolute inset-0 opacity-25 pointer-events-none"
+          {/* Subtle Grid Pattern Overlay */}
+          <div className="absolute inset-0 opacity-15 pointer-events-none"
             style={{
               backgroundImage:
-                'linear-gradient(rgba(255, 255, 255, 0.85) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.85) 1px, transparent 1px)',
-              backgroundSize: '40px 40px',
-            }}
-          />
-
-          {/* Centered Large Serif Typography */}
-          <div className="relative z-10 flex-grow flex items-center justify-center">
-            <span className="text-7xl md:text-9xl font-serif font-light text-white/45 tracking-wider select-none">
-              ROMM
-            </span>
+                "linear-gradient(rgba(255, 255, 255, 0.9) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.9) 1px, transparent 1px)",
+              backgroundSize: "44px 44px",
+            }}>
           </div>
 
-          {/* Bottom Caption */}
-          <div className="relative z-10 text-center">
-            <p className="font-mono text-[11px] md:text-xs tracking-widest font-semibold uppercase text-white/95">
-              ÓRGANO CIENTÍFICO DE SEIOMM Y SIBOMM
+          <div className="relative z-10 text-white -left-[40px]">
+            <h2 className="text-8xl md:text-[160px] font-serif tracking-tighter leading-none mb-4 opacity-40 font-normal">
+              ROMM
+            </h2>
+          </div>
+          <div className="relative z-10 text-white self-end">
+            <p className="font-mono text-xs tracking-widest font-semibold uppercase">
+              ÓRGANO CIENTÍFICO DE SEIOMM Y FEIOMM
             </p>
           </div>
         </motion.div>

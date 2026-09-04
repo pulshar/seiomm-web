@@ -56,7 +56,7 @@ export function AboutHero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="relative h-[280px] md:h-[360px] bg-seiomm-cyan p-8 lg:p-12 flex flex-col justify-end overflow-hidden"
+          className="relative h-[280px] md:h-[360px] bg-seiomm-cyan p-8 lg:p-12 pb-6 lg:pb-8 flex flex-col justify-end overflow-hidden"
         >
           {/* Subtle Grid Pattern Overlay */}
           <div className="absolute inset-0 opacity-15 pointer-events-none"
@@ -71,10 +71,10 @@ export function AboutHero() {
             <h2 className="relative -left-[10px] text-8xl md:text-[160px] font-serif tracking-tighter leading-none mb-4 opacity-40 font-normal">
               1985
             </h2>
-            <p className="font-mono text-sm tracking-widest font-semibold uppercase">
+            <p className="font-mono text-xs tracking-widest font-semibold uppercase">
               Sociedad Científica
             </p>
-            <p className="font-mono text-sm opacity-60">
+            <p className="font-mono text-xs opacity-60">
               CIF G88213036
             </p>
           </div>

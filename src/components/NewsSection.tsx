@@ -44,7 +44,7 @@ export function NewsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-20">
           {/* Featured ROMM Card */}
           <MotionLink
-            to="https://www.revistadeosteoporosisymetabolismomineral.com/magazines/177/show"
+            to="https://www.revistadeosteoporosisymetabolismomineral.com/magazines/181/show"
             target='_blank'
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

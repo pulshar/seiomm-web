@@ -39,9 +39,7 @@ export function BentoSection() {
 
             <div className="relative z-10 w-full flex flex-col h-full justify-between">
 
-              <span className="inline-block w-fit bg-white text-seiomm-dark font-mono text-xs font-semibold px-3 py-1.5 tracking-[0.2em] uppercase mb-6">
-                Congreso
-              </span>
+              <div class="inline-block w-fit rounded-full border border-white/30 bg-white/15 px-3.5 py-1 text-[11px] font-mono tracking-wider text-white uppercase font-medium mb-8">Congreso</div>
               <div className="flex justify-between items-end gap-4">
                 <div>
                   <h3 className="text-3xl md:text-4xl font-serif text-white mb-4">
@@ -86,9 +84,7 @@ export function BentoSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-seiomm-darker/90 via-seiomm-darker/30 to-transparent" />
 
               <div className="relative z-10  w-full flex flex-col h-full justify-between">
-                <span className="inline-block w-fit bg-white text-seiomm-dark font-mono text-xs font-semibold px-3 py-1.5 tracking-[0.2em] uppercase mb-4">
-                  Formación
-                </span>
+                <div class="inline-block w-fit rounded-full border border-white/30 bg-white/15 px-3.5 py-1 text-[11px] font-mono tracking-wider text-white uppercase font-medium mb-8">Formación</div>
                 <div className="flex justify-between items-end gap-4">
                   <div>
                     <h3 className="text-2xl font-serif text-white mb-2">
@@ -128,9 +124,7 @@ export function BentoSection() {
               </div>
 
               <div className="relative z-10  w-full flex flex-col h-full justify-between">
-                <span className="inline-block w-fit bg-white text-seiomm-cyan font-mono text-xs font-semibold px-3 py-1.5 tracking-[0.2em] uppercase mb-4">
-                  Becas y premios
-                </span>
+                <div class="inline-block w-fit rounded-full border border-white/30 bg-white/15 px-3.5 py-1 text-[11px] font-mono tracking-wider text-white uppercase font-medium mb-8">Becas y premios</div>
                 <div className="flex justify-between items-end gap-4">
                   <div>
                     <h3 className="text-2xl font-serif text-white mb-2">

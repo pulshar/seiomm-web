@@ -16,13 +16,13 @@ const articleTypes = [
 
 export function RommSection() {
   return (
-    <section className="bg-white py-20 md:py-28 lg:py-32 border-b border-seiomm-8">
+    <section className="bg-white pb-20 md:pb-28 lg:pb-32 pt-[calc(4.5rem+90px)] md:pt-[calc(6rem+90px)] lg:pt-[calc(8rem+90px)] border-b border-seiomm-8">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
           {/* Left Column: Heading, Info & CTA */}
           <div className="lg:col-span-6">
             <SectionHeader
-              eyebrow="[01] REVISTA ROMM"
+              eyebrow="REVISTA ROMM"
               title={
                 <>
                   Un referente científico{' '}
@@ -49,9 +49,11 @@ export function RommSection() {
               </p>
 
               {/* Latest Issue Badge */}
-              <div className="flex items-center gap-3 pt-2 text-seiomm-mute font-mono text-xs md:text-sm">
-                <FileText className="w-4 h-4 text-seiomm-cyan shrink-0" />
-                <span>Último número: Vol. 17 Núm. 1 (enero-marzo 2025)</span>
+              <div className="flex items-center gap-4 py-6 border-t border-seiomm-10">
+                <div className="w-11 h-11 rounded-full border border-seiomm-cyan/30 bg-seiomm-cyan/5 flex items-center justify-center shrink-0">
+                  <FileText className="w-5 h-5 stroke-[1.6] text-seiomm-cyan" />
+                </div>
+                <span className="text-sm font-medium text-seiomm-body">Último número: Vol. 18 Núm. 2 (abril-junio 2026)</span>
               </div>
 
               {/* Action Link */}
@@ -59,7 +61,7 @@ export function RommSection() {
                 <Link
                   to="https://revistadeosteoporosisymetabolismomineral.com"
                   target="_blank"
-                  className="inline-flex items-center gap-2 text-seiomm-dark font-medium text-sm md:text-base link-underline group"
+                  className="inline-flex items-center gap-2 text-seiomm-dark font-medium text-sm link-underline group"
                 >
                   Consultar la revista en abierto
                   <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
