@@ -4,7 +4,7 @@ import { ArrowUpRight, MapPin, Calendar } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 
-const MotionLink = motion(Link);
+const MotionLink = motion.create(Link);
 
 export function BentoSection() {
   return (

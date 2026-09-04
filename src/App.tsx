@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Lenis from 'lenis';
 import 'lenis/dist/lenis.css';
@@ -6,11 +6,35 @@ import 'lenis/dist/lenis.css';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
-import { Home } from './pages/Home';
-import { About } from './pages/About';
-import { Congress } from './pages/Congress';
-import { VentajasSocio } from './pages/VentajasSocio';
 import { ScrollToHash } from './components/ScrollToHash';
+
+// Route-level code splitting: loads chunks on-demand, reducing initial bundle size
+const Home = lazy(() => import('./pages/Home').then((m) => ({ default: m.Home })));
+const About = lazy(() => import('./pages/About').then((m) => ({ default: m.About })));
+const Congress = lazy(() => import('./pages/Congress').then((m) => ({ default: m.Congress })));
+const VentajasSocio = lazy(() => import('./pages/VentajasSocio').then((m) => ({ default: m.VentajasSocio })));
+const Ciencia = lazy(() => import('./pages/Ciencia').then((m) => ({ default: m.Ciencia })));
+
+// Typed window interface using Omit to cleanly override the ambient lenis definition
+type WindowWithLenis = Omit<Window, 'lenis'> & {
+  lenis?: Lenis;
+};
+
+/**
+ * Lightweight fallback loader rendered while route chunks are fetched.
+ * Minimizes CLS and visual jarring with a sleek spinner.
+ */
+function PageLoader() {
+  return (
+    <div
+      className="flex-grow flex items-center justify-center min-h-[60vh]"
+      role="status"
+      aria-label="Cargando contenido"
+    >
+      <div className="w-8 h-8 rounded-full border-2 border-seiomm-10 border-t-seiomm-cyan animate-spin" />
+    </div>
+  );
+}
 
 export default function App() {
   useEffect(() => {
@@ -20,7 +44,7 @@ export default function App() {
       },
     });
 
-    (window as any).lenis = lenis;
+    (window as unknown as WindowWithLenis).lenis = lenis;
 
     let rafId: number;
 
@@ -41,29 +65,35 @@ export default function App() {
       }
     };
 
-    document.addEventListener("click", handleAnchorClick);
+    document.addEventListener('click', handleAnchorClick);
 
     return () => {
       cancelAnimationFrame(rafId);
-      document.removeEventListener("click", handleAnchorClick);
+      document.removeEventListener('click', handleAnchorClick);
       lenis.destroy();
-      delete (window as any).lenis;
+      delete (window as unknown as WindowWithLenis).lenis;
     };
   }, []);
+
   return (
     <BrowserRouter>
       <ScrollToTop />
       <ScrollToHash />
       <div className="min-h-screen flex flex-col">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/quienes-somos" element={<About />} />
-          <Route path="/congreso" element={<Congress />} />
-          <Route path="/ventajas-socio" element={<VentajasSocio />} />
-        </Routes>
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/quienes-somos" element={<About />} />
+            <Route path="/congreso" element={<Congress />} />
+            <Route path="/ventajas-socio" element={<VentajasSocio />} />
+            <Route path="/ciencia" element={<Ciencia />} />
+          </Routes>
+
+        </Suspense>
         <Footer />
       </div>
     </BrowserRouter>
   );
 }
+
