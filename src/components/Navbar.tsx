@@ -32,9 +32,8 @@ const SeiommLogo = memo(function SeiommLogo({ effectiveIsScrolled }: SeiommLogoP
 
   return (
     <svg
-      className={`transition-[width] duration-300 ${
-        effectiveIsScrolled ? 'w-[120px]' : 'w-[120px] md:w-[150px]'
-      }`}
+      className={`transition-[width] duration-300 ${effectiveIsScrolled ? 'w-[120px]' : 'w-[120px] md:w-[150px]'
+        }`}
       viewBox="0 0 150 72"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -72,6 +71,7 @@ const SeiommLogo = memo(function SeiommLogo({ effectiveIsScrolled }: SeiommLogoP
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { pathname } = useLocation();
 
@@ -83,13 +83,23 @@ export function Navbar() {
   // Optimized scroll listener with rAF throttle & passive flag to avoid layout thrashing
   useEffect(() => {
     let ticking = false;
+    let lastScrollY = window.scrollY;
 
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
           const threshold = window.innerWidth <= 768 ? 20 : 120;
-          const shouldBeScrolled = window.scrollY > threshold;
+          const shouldBeScrolled = currentScrollY > threshold;
           setIsScrolled((prev) => (prev !== shouldBeScrolled ? shouldBeScrolled : prev));
+
+          // Hide when scrolling down (past a small buffer), show when scrolling up
+          if (currentScrollY > lastScrollY && currentScrollY > 80) {
+            setIsHidden(true);
+          } else {
+            setIsHidden(false);
+          }
+          lastScrollY = currentScrollY;
           ticking = false;
         });
         ticking = true;
@@ -114,11 +124,10 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        effectiveIsScrolled
-          ? 'bg-white/98 backdrop-blur-md py-4 border-b border-seiomm-10'
-          : 'bg-transparent border-transparent py-6'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-250 ${isHidden ? '-translate-y-[110%]' : 'translate-y-0'} ${effectiveIsScrolled
+        ? 'bg-white/98 backdrop-blur-md py-4 border-b border-seiomm-10'
+        : 'bg-transparent border-transparent py-6'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
@@ -132,15 +141,14 @@ export function Navbar() {
             <Link
               key={link.name}
               to={link.href}
-              className={`link-underline text-sm font-medium transition-colors ${
-                pathname === link.href
-                  ? effectiveIsScrolled
-                    ? 'text-seiomm-cyan pointer-events-none'
-                    : 'text-seiomm-cyan-on-dark pointer-events-none'
-                  : effectiveIsScrolled
-                    ? 'text-seiomm-body hover:text-seiomm-dark'
-                    : 'text-white/80 hover:text-white'
-              }`}
+              className={`link-underline text-sm font-medium transition-colors ${pathname === link.href
+                ? effectiveIsScrolled
+                  ? 'text-seiomm-cyan pointer-events-none'
+                  : 'text-seiomm-cyan-on-dark pointer-events-none'
+                : effectiveIsScrolled
+                  ? 'text-seiomm-body hover:text-seiomm-dark'
+                  : 'text-white/80 hover:text-white'
+                }`}
             >
               {link.name}
             </Link>
@@ -151,11 +159,10 @@ export function Navbar() {
         <div className="hidden lg:block">
           <Link
             to="#"
-            className={`group flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-colors ${
-              effectiveIsScrolled
-                ? 'bg-seiomm-dark text-white hover:bg-seiomm-cyan'
-                : 'bg-white/80 text-seiomm-dark hover:bg-white'
-            }`}
+            className={`group flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-colors ${effectiveIsScrolled
+              ? 'bg-seiomm-dark text-white hover:bg-seiomm-cyan'
+              : 'bg-white/80 text-seiomm-dark hover:bg-white'
+              }`}
           >
             Área privada
             <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -164,9 +171,8 @@ export function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className={`lg:hidden p-1 rounded-md ${
-            effectiveIsScrolled ? 'text-seiomm-dark hover:text-seiomm-cyan' : 'text-white hover:text-gray-100'
-          }`}
+          className={`lg:hidden p-1 rounded-md ${effectiveIsScrolled ? 'text-seiomm-dark hover:text-seiomm-cyan' : 'text-white hover:text-gray-100'
+            }`}
           onClick={toggleMobileMenu}
           aria-expanded={isMobileMenuOpen}
           aria-label={isMobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
@@ -183,9 +189,8 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className={`lg:hidden absolute top-full left-0 w-full shadow-xl ${
-              effectiveIsScrolled ? 'bg-white/99 backdrop-blur-md' : 'bg-seiomm-dark/98 backdrop-blur-md'
-            }`}
+            className={`lg:hidden absolute top-full left-0 w-full shadow-xl ${effectiveIsScrolled ? 'bg-white/99 backdrop-blur-md' : 'bg-seiomm-dark/98 backdrop-blur-md'
+              }`}
           >
             <div className="flex flex-col px-6 py-6 gap-4">
               {NAV_LINKS.map((link) => (
@@ -193,24 +198,22 @@ export function Navbar() {
                   key={link.name}
                   to={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`font-serif text-xl py-2 border-b ${
-                    pathname === link.href
-                      ? effectiveIsScrolled
-                        ? 'border-seiomm-dark/5 text-seiomm-cyan pointer-events-none'
-                        : 'border-white/10 text-seiomm-cyan-on-dark pointer-events-none'
-                      : effectiveIsScrolled
-                        ? 'border-seiomm-dark/5 text-seiomm-body hover:text-seiomm-dark'
-                        : 'border-white/10 text-white/80 hover:text-white'
-                  }`}
+                  className={`font-serif text-xl py-2 border-b ${pathname === link.href
+                    ? effectiveIsScrolled
+                      ? 'border-seiomm-dark/5 text-seiomm-cyan pointer-events-none'
+                      : 'border-white/10 text-seiomm-cyan-on-dark pointer-events-none'
+                    : effectiveIsScrolled
+                      ? 'border-seiomm-dark/5 text-seiomm-body hover:text-seiomm-dark'
+                      : 'border-white/10 text-white/80 hover:text-white'
+                    }`}
                 >
                   {link.name}
                 </Link>
               ))}
               <Link
                 to="#"
-                className={`flex items-center justify-center gap-2 px-5 py-3 rounded-full text-base font-medium mt-4 ${
-                  effectiveIsScrolled ? 'bg-seiomm-dark text-white' : 'bg-white text-seiomm-dark'
-                }`}
+                className={`flex items-center justify-center gap-2 px-5 py-3 rounded-full text-base font-medium mt-4 ${effectiveIsScrolled ? 'bg-seiomm-dark text-white' : 'bg-white text-seiomm-dark'
+                  }`}
               >
                 Área privada
                 <ArrowUpRight className="w-4 h-4" />

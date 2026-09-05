@@ -7,36 +7,64 @@ export function CongressJoinSection() {
   return (
     <section className="py-18 md:py-24 lg:py-32 bg-seiomm-dark border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6">
-        <SectionHeader
-          eyebrow="Inscripción"
-          title={<>Reserva tu plaza en la cita anual de la <span className="text-seiomm-cyan-on-dark">ciencia del hueso.</span></>}
-          fontLight
-          theme="dark"
-          description={
-            <div className="flex flex-col gap-8">
-              <p className="text-white/80">
-                Tarifa reducida disponible hasta el 15 de septiembre de 2026. Los socios SEIOMM disfrutan de condiciones especiales.
-              </p>
-              <div className="flex flex-wrap items-center gap-6">
-                <a
-                  href="#"
-                  className="group flex items-center gap-2 bg-white text-seiomm-dark text-sm px-6 py-3 rounded-full font-medium hover:bg-seiomm-cyan-on-dark transition-all duration-300"
-                >
-                  Inscríbete ahora
-                  <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </a>
-                <a
-                  href="#"
-                  className="link-underline group flex items-center gap-2 text-white/80 hover:text-white font-medium text-sm transition-colors"
-                >
-                  Secretaría técnica
-                  <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </a>
-              </div>
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12">
+          {/* Left Column */}
+          <div className="max-w-2xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="flex items-center gap-3 mb-6"
+            >
+              <span className="w-2 h-2 rounded-full bg-seiomm-cyan-on-dark" />
+              <span className="text-seiomm-mute font-mono text-xs font-semibold tracking-[0.2em] uppercase">
+                Inscripción
+              </span>
+            </motion.div>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-4xl md:text-5xl font-serif text-white font-light leading-[1.12]"
+            >
+              Reserva tu plaza en la cita anual de la <span className="text-seiomm-cyan-on-dark">ciencia del hueso.</span>
+            </motion.h2>
+          </div>
+
+          {/* Right Column */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex flex-col gap-8 max-w-md"
+          >
+            <p className="text-white/80 text-base leading-relaxed">
+              Tarifa reducida disponible hasta el 15 de septiembre de 2026. Los socios SEIOMM disfrutan de condiciones especiales.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-6">
+              <a
+                href="#"
+                className="group flex items-center gap-2 bg-white text-seiomm-dark text-sm px-6 py-3 rounded-full font-medium hover:bg-seiomm-cyan-on-dark transition-all duration-300"
+              >
+                Inscríbete ahora
+                <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </a>
+              <a
+                href="#"
+                className="link-underline group flex items-center gap-2 text-white/80 hover:text-white font-medium text-sm transition-colors"
+              >
+                Secretaría técnica
+                <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </a>
             </div>
-          }
-        />
+          </motion.div>
+        </div>
       </div>
     </section>
   );
-}
+} 

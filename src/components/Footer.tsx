@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 export function Footer() {
   return (
-    <footer className="bg-seiomm-darker text-white pt-32 pb-8">
+    <footer className="bg-seiomm-darker text-white pt-18 md:pt-24 lg:pt-32 pb-8">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-[10vw] mb-32">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-[10vw] mb-18 md:mb-24 lg:mb-32">
 
           {/* Brand Info */}
           <div className="flex flex-col gap-8">
