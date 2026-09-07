@@ -49,7 +49,7 @@ export function BecasSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 * idx }}
-              className="bg-white p-8 md:p-10 lg:p-12 flex flex-col justify-between hover:bg-seiomm-gray/50 transition-colors duration-300"
+              className="bg-white p-8 md:p-10 lg:p-12 flex flex-col justify-between border-b border-seiomm-10 last:border-b-0 md:border-b-0 hover:bg-seiomm-gray/50 transition-colors duration-300"
             >
               <div>
                 {/* Metric / Highlight */}

@@ -7,6 +7,7 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
 import { ScrollToHash } from './components/ScrollToHash';
+import { NoticiaSingle } from './components/Actualidad/NoticiaSingle';
 
 // Route-level code splitting: loads chunks on-demand, reducing initial bundle size
 const Home = lazy(() => import('./pages/Home').then((m) => ({ default: m.Home })));
@@ -16,6 +17,7 @@ const VentajasSocio = lazy(() => import('./pages/VentajasSocio').then((m) => ({ 
 const Ciencia = lazy(() => import('./pages/Ciencia').then((m) => ({ default: m.Ciencia })));
 const Formacion = lazy(() => import('./pages/Formacion').then((m) => ({ default: m.Formacion })));
 const Recursos = lazy(() => import('./pages/Recursos').then((m) => ({ default: m.Recursos })));
+const Actualidad = lazy(() => import('./pages/Actualidad').then((m) => ({ default: m.Actualidad })));
 
 // Typed window interface using Omit to cleanly override the ambient lenis definition
 type WindowWithLenis = Omit<Window, 'lenis'> & {
@@ -92,6 +94,8 @@ export default function App() {
             <Route path="/ciencia" element={<Ciencia />} />
             <Route path="/formacion" element={<Formacion />} />
             <Route path="/recursos" element={<Recursos />} />
+            <Route path="/actualidad" element={<Actualidad />} />
+            <Route path="/actualidad/noticia-ejemplo" element={<NoticiaSingle />} />
           </Routes>
 
 

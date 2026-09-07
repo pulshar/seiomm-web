@@ -141,7 +141,7 @@ export function Navbar() {
             <Link
               key={link.name}
               to={link.href}
-              className={`link-underline text-sm font-medium transition-colors ${pathname === link.href
+              className={`link-underline text-sm font-medium transition-colors ${pathname === link.href || pathname.startsWith(`${link.href}/`)
                 ? effectiveIsScrolled
                   ? 'text-seiomm-cyan pointer-events-none'
                   : 'text-seiomm-cyan-on-dark pointer-events-none'
@@ -198,7 +198,7 @@ export function Navbar() {
                   key={link.name}
                   to={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`font-serif text-xl py-2 border-b ${pathname === link.href
+                  className={`font-serif text-xl py-2 border-b ${pathname === link.href || pathname.startsWith(`${link.href}/`)
                     ? effectiveIsScrolled
                       ? 'border-seiomm-dark/5 text-seiomm-cyan pointer-events-none'
                       : 'border-white/10 text-seiomm-cyan-on-dark pointer-events-none'

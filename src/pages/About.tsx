@@ -5,6 +5,7 @@ import { ValuesSection } from '../components/about/ValuesSection';
 import { BoardSection } from '../components/about/BoardSection';
 import { HistorySection } from '../components/about/HistorySection';
 import { JoinSectionDarkBg } from '../components/JoinSectionDarkBg';
+import { MarqueeSection } from '../components/MarqueeSection';
 
 export function About() {
   useEffect(() => {
@@ -17,6 +18,7 @@ export function About() {
       <ValuesSection />
       <BoardSection />
       <HistorySection />
+      <MarqueeSection />
       <JoinSectionDarkBg />
     </main>
   );

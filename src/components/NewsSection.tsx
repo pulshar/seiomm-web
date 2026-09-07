@@ -10,22 +10,28 @@ const newsItems = [
   {
     category: 'Noticia',
     date: 'Jul 2026',
-    title: 'Convocatoria abierta para la selección de una agencia de comunicación'
+    title: 'Convocatoria abierta para la selección de una agencia de comunicación',
+    href: 'https://seiomm.org/convocatoria-abierta-para-la-seleccion-de-una-agencia-de-comunicacion/'
+
+
   },
   {
     category: 'Noticia',
     date: 'Abr 2026',
-    title: 'La salud ósea en el espacio: claves tras la misión Artemis II'
+    title: 'La salud ósea en el espacio: claves tras la misión Artemis II',
+    href: 'https://seiomm.org/la-salud-osea-en-el-espacio-claves-tras-la-mision-artemis-ii/'
   },
   {
     category: 'Noticia',
     date: 'Dic 2025',
-    title: 'La ROMM: un referente científico en salud ósea'
+    title: 'La ROMM: un referente científico en salud ósea',
+    href: 'https://seiomm.org/la-romm-un-referente-cientifico-en-salud-osea/'
   },
   {
     category: 'Entrevista',
     date: 'Jul 2026',
-    title: 'Entrevistas SEIOMM · Mitos y realidades sobre la vitamina D'
+    title: 'Entrevistas SEIOMM · Mitos y realidades sobre la vitamina D',
+    href: 'https://seiomm.org/entrevistas-seiomm-%c2%b7-mitos-y-realidades-sobre-la-vitamina-d/'
   }
 ];
 
@@ -84,9 +90,9 @@ export function NewsSection() {
           <div className="flex flex-col">
             <div className="flex flex-col border-t border-seiomm-10">
               {newsItems.map((item, index) => (
-                <motion.a
+                <MotionLink
                   key={index}
-                  href="#"
+                  to="/actualidad/noticia-ejemplo"
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
@@ -108,12 +114,12 @@ export function NewsSection() {
                   <div className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-gray-500 group-hover:border-seiomm-dark group-hover:text-white group-hover:bg-seiomm-dark transition-all duration-300 flex-shrink-0">
                     <ArrowUpRight className="w-4 h-4" />
                   </div>
-                </motion.a>
+                </MotionLink>
               ))}
             </div>
 
-            <motion.a
-              href="#"
+            <MotionLink
+              to="/actualidad"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -122,7 +128,7 @@ export function NewsSection() {
             >
               Ver toda la actualidad
               <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </motion.a>
+            </MotionLink>
           </div>
         </div>
       </div>

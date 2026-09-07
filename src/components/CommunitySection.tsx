@@ -2,6 +2,7 @@ import React from 'react';
 import { MoveRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
+import { AnimatedNumber } from './AnimatedNumber';
 
 export function CommunitySection() {
   return (
@@ -61,7 +62,7 @@ export function CommunitySection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col gap-2"
           >
-            <span className="text-6xl md:text-7xl font-serif text-white font-light">+500</span>
+            <span className="text-6xl md:text-7xl font-serif text-white font-light"><AnimatedNumber value={500} prefix="+" /></span>
             <span className="text-white/60 text-xs font-mono font-bold tracking-[0.2em] uppercase">Profesionales</span>
           </motion.div>
 
@@ -72,7 +73,7 @@ export function CommunitySection() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col gap-2"
           >
-            <span className="text-6xl md:text-7xl font-serif text-white font-light">1985</span>
+            <span className="text-6xl md:text-7xl font-serif text-white font-light"><AnimatedNumber value={1985} /></span>
             <span className="text-white/60 text-xs font-mono font-bold tracking-[0.2em] uppercase">Hasta la actualidad</span>
           </motion.div>
 

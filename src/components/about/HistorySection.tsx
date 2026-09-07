@@ -25,7 +25,7 @@ const historyTimeline = [
 
 export function HistorySection() {
   return (
-    <section className="py-18 md:py-24 lg:py-32 bg-seiomm-gray border-t border-seiomm-8">
+    <section className="py-18 md:py-24 lg:py-32 bg-seiomm-gray border-t border-b border-seiomm-8">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeader
           eyebrow="Nuestra historia"

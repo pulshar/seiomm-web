@@ -6,6 +6,7 @@ import { NewsSection } from '../components/NewsSection';
 import { CommunitySection } from '../components/CommunitySection';
 import { MarqueeSection } from '../components/MarqueeSection';
 import { JoinSection } from '../components/JoinSection';
+import { SponsorsMarquee } from '../components/SponsorsWeb';
 
 export function Home() {
   useEffect(() => {
@@ -18,7 +19,7 @@ export function Home() {
       <PillarsSection />
       <NewsSection />
       <CommunitySection />
-      <MarqueeSection />
+      <SponsorsMarquee />
       <JoinSection />
     </main>
   );
