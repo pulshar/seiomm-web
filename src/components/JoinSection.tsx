@@ -48,14 +48,14 @@ export function JoinSection() {
               <Link
                 to="https://socios.seiomm.org/register"
                 target='_blank'
-                className="group flex items-center gap-2 bg-seiomm-cyan text-white text-sm px-6 py-3 rounded-full font-medium hover:bg-seiomm-cyan-hover transition-all duration-300"
+                className="group btn-w-100 flex items-center gap-2 bg-seiomm-cyan text-white text-sm px-6 py-3 rounded-full font-medium hover:bg-seiomm-cyan-hover transition-all duration-300"
               >
                 Hazte socio
                 <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
                 to="/ventajas-socio"
-                className="link-underline group flex items-center gap-2 text-seiomm-dark font-medium text-sm"
+                className="link-underline group btn-w-100 flex items-center gap-2 text-seiomm-dark font-medium text-sm"
               >
                 Conoce las ventajas
                 <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

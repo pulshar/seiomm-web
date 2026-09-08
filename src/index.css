@@ -42,6 +42,13 @@
   .image-scale-hover {
     @apply transition-transform duration-700 ease-out group-hover:scale-105;
   }
+
+  @media (max-width: 412px) {
+    .btn-w-100 {
+      width: 100%;
+      justify-content: center;
+    }
+  }
 }
 
 @layer components {

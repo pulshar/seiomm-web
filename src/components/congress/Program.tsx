@@ -56,12 +56,12 @@ export function Program() {
           description="Conferencias, mesas redondas, comunicaciones orales y talleres prácticos. Programa provisional sujeto a confirmación de ponentes."
         />
 
-        <div className="flex flex-wrap gap-3 mb-10">
+        <div className="flex flex-nowrap md:flex-wrap items-center gap-3 mb-8 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden -mx-6 px-6 md:mx-0 md:px-0">
           {programData.map((day) => (
             <button
               key={day.id}
               onClick={() => setActiveTab(day.id)}
-              className={`px-8 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeTab === day.id
+              className={`shrink-0 px-8 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeTab === day.id
                 ? 'bg-seiomm-darker text-white'
                 : 'bg-white text-seiomm-dark border border-seiomm-10 hover:border-seiomm-dark/60'
                 }`}
@@ -83,14 +83,14 @@ export function Program() {
                   transition={{ duration: 0.3 }}
                   className="overflow-hidden"
                 >
-                  <div className="bg-white px-8 md:px-12 py-8 border-b border-seiomm-10">
+                  <div className="bg-white px-6 md:px-12 py-8 border-b border-seiomm-10">
                     <h3 className="font-serif italic text-xl text-seiomm-mute">{day.dateFull}</h3>
                   </div>
                   <div className="flex flex-col">
                     {day.sessions.map((session, index) => (
                       <div
                         key={index}
-                        className="flex flex-col md:flex-row md:items-start md:items-center px-8 md:px-12 py-6 md:py-8 border-b border-seiomm-10 gap-4 md:gap-8 bg-white hover:bg-seiomm-gray transition-colors"
+                        className="flex flex-col md:flex-row md:items-start md:items-center px-6 md:px-12 py-6 md:py-8 border-b border-seiomm-10 gap-4 md:gap-8 bg-white hover:bg-seiomm-gray transition-colors"
                       >
                         <div className="md:w-32 text-2xl md:text-3xl font-serif font-light text-seiomm-cyan shrink-0">
                           {session.time}

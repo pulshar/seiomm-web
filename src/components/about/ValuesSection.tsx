@@ -58,7 +58,7 @@ export function ValuesSection() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-seiomm-gray flex flex-col p-8 md:p-10 group transition-colors duration-500 hover:bg-white"
+              className="bg-seiomm-gray flex flex-col p-6 md:p-10 group transition-colors duration-500 hover:bg-white"
             >
               <span className="font-mono text-sm text-seiomm-mute mb-6 tracking-widest transition-colors duration-500 group-hover:text-seiomm-cyan-on-dark">
                 {value.number}
@@ -76,7 +76,7 @@ export function ValuesSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: values.length * 0.1 }}
-            className="bg-seiomm-cyan flex flex-col p-8 md:p-10 text-seiomm-darker"
+            className="bg-seiomm-cyan flex flex-col p-6 md:p-10 text-seiomm-darker"
           >
             <span className="font-mono text-sm mb-6 tracking-widest font-semibold uppercase text-white opacity-60">
               Desde 1985

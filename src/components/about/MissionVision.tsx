@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 
 export function MissionVision() {
   return (
-    <section className="bg-white pb-20 md:pb-28 lg:pb-32 pt-[calc(4.5rem+90px)] md:pt-[calc(6rem+90px)] lg:pt-[calc(8rem+90px)] border-b border-seiomm-8">
+    <section className="bg-white py-20 md:py-28 lg:py-32 border-b border-seiomm-8">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

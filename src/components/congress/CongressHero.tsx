@@ -68,14 +68,14 @@ export function CongressHero() {
           >
             <a
               href="#inscripciones"
-              className="group flex items-center gap-2 bg-white text-seiomm-darker px-6 py-3 rounded-full font-medium hover:bg-seiomm-cyan-on-dark transition-all duration-300"
+              className="group btn-w-100 flex items-center gap-2 bg-white text-seiomm-darker px-6 py-3 rounded-full font-medium hover:bg-seiomm-cyan-on-dark transition-all duration-300"
             >
               Inscripciones
               <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
               href="#programa"
-              className="group link-underline flex items-center gap-2 font-medium transition-colors text-white/80 hover:text-white"
+              className="group btn-w-100 link-underline flex items-center gap-2 font-medium transition-colors text-white/80 hover:text-white"
             >
               Ver programa
               <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

@@ -53,7 +53,7 @@ export function KeyDates() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`flex flex-col md:flex-row md:items-center border-b border-seiomm-10 py-8 md:py-10 px-6 md:px-10 gap-6 md:gap-12 transition-colors ${item.highlight ? 'bg-seiomm-gray' : 'hover:bg-seiomm-gray/50'
+              className={`flex flex-col md:flex-row md:items-center border-b border-seiomm-10 py-8 md:py-10 px-4 md:px-10 gap-6 md:gap-12 transition-colors ${item.highlight ? 'hover:bg-seiomm-cyan/5' : 'hover:bg-seiomm-gray/50'
                 }`}
             >
               <div className={`md:w-1/3 text-2xl md:text-3xl font-serif font-light ${item.highlight ? 'text-seiomm-cyan' : 'text-seiomm-dark'}`}>

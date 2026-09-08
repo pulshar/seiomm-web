@@ -46,7 +46,7 @@ export function VentajasPasos() {
               <Link
                 to="https://socios.seiomm.org/register"
                 target='_blank'
-                className="group flex items-center gap-2 bg-seiomm-cyan text-white px-6 py-3 w-fit rounded-full font-medium hover:bg-seiomm-cyan-hover transition-all duration-300"
+                className="group btn-w-100 flex items-center gap-2 bg-seiomm-cyan text-white px-6 py-3 w-fit rounded-full font-medium hover:bg-seiomm-cyan-hover transition-all duration-300"
               >
                 Solicitar el alta
                 <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -64,7 +64,7 @@ export function VentajasPasos() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.1 * idx }}
-                  className="py-8 md:py-10 flex items-start gap-8 md:gap-12 group"
+                  className="py-8 md:py-10 flex items-start md:gap-12 group"
                 >
                   {/* Big Number */}
                   <span className="text-4xl md:text-5xl lg:text-6xl font-serif font-light text-seiomm-mute/30 group-hover:text-seiomm-cyan-on-dark/60 transition-colors duration-300 w-10 md:w-12 shrink-0 leading-none select-none">

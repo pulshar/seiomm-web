@@ -49,14 +49,14 @@ export function CongressJoinSection() {
             <div className="flex flex-wrap items-center gap-6">
               <a
                 href="#"
-                className="group flex items-center gap-2 bg-white text-seiomm-dark text-sm px-6 py-3 rounded-full font-medium hover:bg-seiomm-cyan-on-dark transition-all duration-300"
+                className="group btn-w-100 flex items-center gap-2 bg-white text-seiomm-dark text-sm px-6 py-3 rounded-full font-medium hover:bg-seiomm-cyan-on-dark transition-all duration-300"
               >
                 Inscríbete ahora
                 <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
               <a
                 href="#"
-                className="link-underline group flex items-center gap-2 text-white/80 hover:text-white font-medium text-sm transition-colors"
+                className="link-underline group btn-w-100 flex items-center gap-2 text-white/80 hover:text-white font-medium text-sm transition-colors"
               >
                 Secretaría técnica
                 <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

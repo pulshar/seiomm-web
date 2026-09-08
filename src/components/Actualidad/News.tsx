@@ -88,7 +88,7 @@ export function News() {
     );
 
     return (
-        <section className="relative top-[90px] bg-seiomm-gray py-18 md:py-24 lg:py-32 overflow-hidden border-b border-seiomm-dark/8">
+        <section className="bg-seiomm-gray pb-20 md:pb-28 lg:pb-32 pt-[calc(4.5rem+90px)] md:pt-[calc(6rem+90px)] lg:pt-[calc(8rem+90px)] border-b border-seiomm-8">
             <div className="max-w-7xl mx-auto px-6">
 
                 {/* Header Section */}
@@ -129,13 +129,13 @@ export function News() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
-                    className="flex flex-wrap items-center gap-3 mb-16"
+                    className="flex flex-nowrap md:flex-wrap items-center gap-3 mb-8 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden -mx-6 px-6 md:mx-0 md:px-0"
                 >
                     {categories.map((category) => (
                         <button
                             key={category}
                             onClick={() => setSelectedCategory(category)}
-                            className={`px-5 py-2 rounded-full text-sm font-medium transition-colors border ${selectedCategory === category
+                            className={`shrink-0 px-5 py-2 rounded-full text-sm font-medium transition-colors border ${selectedCategory === category
                                 ? 'bg-seiomm-dark text-white border-seiomm-dark'
                                 : 'bg-white text-seiomm-body border border-seiomm-10 hover:border-seiomm-dark/60 hover:text-seiomm-dark'
                                 }`}
@@ -155,10 +155,10 @@ export function News() {
                             <motion.div
                                 key={item.id}
                                 layout
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ duration: 0.4, delay: index * 0.15 }}
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.95 }}
+                                transition={{ duration: 0.25 }}
                             >
                                 <Link
                                     // to={item.id === 1 ? "/actualidad/noticia-ejemplo" : item.href}
@@ -181,10 +181,10 @@ export function News() {
                                     <div className="flex flex-col flex-grow">
                                         <div className="flex items-center justify-between gap-4 mb-4">
                                             <span className="text-seiomm-cyan text-xs font-mono font-bold tracking-wider uppercase">
-                                                {item.category}
+                                                {item.date}
                                             </span>
                                             <span className="text-seiomm-mute text-xs font-mono font-semibold tracking-wider uppercase">
-                                                {item.date}
+                                                {item.category}
                                             </span>
                                         </div>
 
@@ -195,13 +195,12 @@ export function News() {
                                             {item.title}
                                         </motion.h3>
 
-                                        <Link
-                                            to="noticia-ejemplo"
+                                        <div
                                             className="link-underline group flex items-center gap-2 text-seiomm-dark font-medium text-sm w-fit"
                                         >
                                             Leer más
                                             <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                                        </Link>
+                                        </div>
                                     </div>
                                 </Link>
                             </motion.div>

@@ -66,7 +66,7 @@ export function DocumentosSection() {
               to={doc.href}
               target={doc.isExternal ? '_blank' : undefined}
               rel={doc.isExternal ? 'noopener noreferrer' : undefined}
-              className={`group bg-white p-8 md:p-10 flex items-start justify-between gap-6 transition-all duration-300 border border-seiomm-10`}
+              className={`group bg-white p-6 md:p-10 flex items-start justify-between gap-6 transition-all duration-300 border border-seiomm-10`}
             >
               <div className="min-w-0">
                 <h3 className="font-serif text-xl md:text-2xl font-normal text-seiomm-dark mb-2 group-hover:text-seiomm-cyan transition-colors duration-300">

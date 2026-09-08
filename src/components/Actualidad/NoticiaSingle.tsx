@@ -33,15 +33,14 @@ export function NoticiaSingle() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 mb-8">
                         <div className="lg:col-span-8">
                             <header>
-                                <div className="flex items-center gap-4 mb-6 text-xs font-mono tracking-[0.2em] uppercase">
-                                    <span className="flex items-center gap-1.5 text-seiomm-cyan font-bold">
+                                <div className="flex flex-wrap items-center gap-4 mb-6 text-xs font-mono tracking-[0.2em] uppercase">
+
+                                    <span className="flex shrink-0 items-center gap-1.5 text-seiomm-cyan font-semibold">
+                                        10 Septiembre 2026
+                                    </span>
+                                    <span className="flex shrink-0 items-center gap-1.5 text-seiomm-mute font-bold">
                                         <Tag className="w-4 h-4" />
                                         Noticias
-                                    </span>
-                                    <span className="text-seiomm-border">|</span>
-                                    <span className="flex items-center gap-1.5 text-seiomm-mute font-semibold">
-                                        <Calendar className="w-4 h-4" />
-                                        10 Septiembre 2026
                                     </span>
                                 </div>
 
@@ -97,13 +96,11 @@ export function NoticiaSingle() {
                             </div>
 
                             {/* Footer / Share */}
-                            <div className="mt-16 pt-8 border-t border-seiomm-dark/10 flex items-center justify-between">
-                                <span className="text-sm font-medium text-seiomm-mute">Compartir artículo:</span>
-                                <div className="flex gap-4">
-                                    <button className="w-10 h-10 rounded-full border border-seiomm-border flex items-center justify-center text-seiomm-mute hover:text-white hover:bg-seiomm-dark hover:border-seiomm-dark transition-all duration-300">
-                                        <Share2 className="w-4 h-4" />
-                                    </button>
-                                </div>
+                            <div className="group mt-16 pt-8 border-t border-seiomm-dark/10 flex items-center justify-end gap-4">
+                                <span className="text-sm font-medium text-seiomm-mute group-hover:text-seiomm-dark  transition-colors duration-300">Compartir artículo</span>
+                                <button className="w-10 h-10 rounded-full border border-seiomm-border flex items-center justify-center text-seiomm-mute group-hover:text-white group-hover:bg-seiomm-dark group-hover:border-seiomm-dark transition-all duration-300">
+                                    <Share2 className="w-4 h-4" />
+                                </button>
                             </div>
                         </div>
 
@@ -121,8 +118,8 @@ export function NoticiaSingle() {
                                 {/* ROMM Card */}
                                 <motion.a
                                     href="#"
-                                    initial={{ opacity: 0, x: 20 }}
-                                    animate={{ opacity: 1, x: 0 }}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
                                     transition={{ duration: 0.6, delay: 0.2 }}
                                     className="group relative overflow-hidden flex flex-col justify-end min-h-[216px] p-8 bg-gray-100"
                                 >
@@ -151,8 +148,8 @@ export function NoticiaSingle() {
                                 {/* Sin Fisuras Card */}
                                 <motion.a
                                     href="#"
-                                    initial={{ opacity: 0, x: 20 }}
-                                    animate={{ opacity: 1, x: 0 }}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
                                     transition={{ duration: 0.6, delay: 0.3 }}
                                     className="group relative overflow-hidden flex flex-col justify-end min-h-[216px] p-8 bg-seiomm-gray border border-seiomm-dark/10"
                                 >
