@@ -17,7 +17,7 @@ export function ScrollToHash() {
 
       if (lenis) {
         lenis.scrollTo(element, {
-          offset: -90,
+          offset: -75,
         });
       } else {
         element.scrollIntoView();

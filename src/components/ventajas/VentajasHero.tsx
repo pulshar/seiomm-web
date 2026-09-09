@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 
 export function VentajasHero() {
   return (
-    <section className="bg-seiomm-gray pb-20 md:pb-28 lg:pb-32 pt-[calc(4.5rem+90px)] md:pt-[calc(6rem+90px)] lg:pt-[calc(8rem+90px)] border-b border-seiomm-8">
+    <section className="bg-seiomm-gray pb-20 md:pb-28 lg:pb-32 pt-[calc(4.5rem+75px)] md:pt-[calc(6rem+75px)] lg:pt-[calc(8rem+75px)] border-b border-seiomm-8">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
         {/* Text Content */}
         <div className="relative z-20">

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-[90px] md:pt-[0px] bg-seiomm-darker overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-[75px] md:pt-[0px] bg-seiomm-darker overflow-hidden">
       {/* Background Image with Gradient Mask */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-seiomm-darker via-seiomm-darker to-transparent z-10 lg:w-2/3" />

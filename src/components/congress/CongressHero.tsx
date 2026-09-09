@@ -4,7 +4,7 @@ import { MoveRight, Calendar, MapPin } from 'lucide-react';
 
 export function CongressHero() {
   return (
-    <section className="relative min-h-[90vh] bg-seiomm-darker pt-[90px] flex items-center overflow-hidden">
+    <section className="relative min-h-[80vh] bg-seiomm-darker pt-[75px] flex items-center overflow-hidden">
       {/* Background Image with Gradient Mask */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-seiomm-darker via-seiomm-darker/80 to-transparent z-10 lg:w-2/3" />

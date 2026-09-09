@@ -40,7 +40,7 @@ export function Footer() {
             </div>
 
             <p className="text-white/60 text-sm max-w-sm leading-relaxed">
-              Sociedad Española de Investigación Ósea y Metabolismo Mineral. Ciencia, formación y comunidad al servicio de la salud ósea desde 1985.
+              Sociedad Española y Fundación Española de Investigación Ósea y Metabolismo Mineral. Ciencia, formación y comunidad al servicio de la salud ósea desde 1985.
             </p>
 
             <div className="flex items-center gap-4">

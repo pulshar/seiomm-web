@@ -44,7 +44,7 @@ export default function App() {
   useEffect(() => {
     const lenis = new Lenis({
       anchors: {
-        offset: -90,
+        offset: -75,
       },
     });
 
