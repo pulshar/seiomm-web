@@ -72,7 +72,7 @@ export function Hero() {
               paginate(-1);
             }
           }}
-          className="absolute inset-0 w-full h-full cursor-grab active:cursor-grabbing"
+          className="absolute inset-0 w-full h-full active:cursor-grabbing"
         >
           {imageIndex === 0 ? <SlideOne /> : <SlideTwo />}
         </motion.div>

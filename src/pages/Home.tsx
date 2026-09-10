@@ -4,7 +4,6 @@ import { BentoSection } from '../components/BentoSection';
 import { PillarsSection } from '../components/PillarsSection';
 import { NewsSection } from '../components/NewsSection';
 import { CommunitySection } from '../components/CommunitySection';
-import { MarqueeSection } from '../components/MarqueeSection';
 import { JoinSection } from '../components/JoinSection';
 import { SponsorsMarquee } from '../components/SponsorsWeb';
 
