@@ -25,6 +25,13 @@ const variants = {
   }
 };
 
+const slides = [
+  <SlideOne />,
+  <SlideTwo />,
+  // <SlideThree />,
+  // <SlideFour />
+];
+
 const swipeConfidenceThreshold = 10000;
 const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity;
@@ -33,12 +40,18 @@ const swipePower = (offset: number, velocity: number) => {
 export function Hero() {
   const [[page, direction], setPage] = useState([0, 0]);
 
-  // Wrap calculation for array of 2 slides
-  const imageIndex = page >= 0 ? page % 2 : (2 + (page % 2)) % 2;
+  // Wrap calculation for array of 4 slides
+  const imageIndex =
+    page >= 0
+      ? page % slides.length
+      : (slides.length + (page % slides.length)) % slides.length;
 
   const paginate = useCallback((newDirection: number) => {
-    setPage([page + newDirection, newDirection]);
-  }, [page]);
+    setPage(([currentPage]) => [
+      currentPage + newDirection,
+      newDirection
+    ]);
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -48,7 +61,7 @@ export function Hero() {
   }, [paginate]);
 
   return (
-    <section className="relative min-h-screen bg-seiomm-darker overflow-hidden flex items-center justify-center">
+    <section className="relative min-h-screen bg-seiomm-dark overflow-hidden flex items-center justify-center">
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={page}
@@ -74,7 +87,7 @@ export function Hero() {
           }}
           className="absolute inset-0 w-full h-full active:cursor-grabbing"
         >
-          {imageIndex === 0 ? <SlideOne /> : <SlideTwo />}
+          {slides[imageIndex]}
         </motion.div>
       </AnimatePresence>
 
@@ -84,11 +97,20 @@ export function Hero() {
           <ChevronLeft className="w-5 h-5" />
         </button> */}
         <div className="flex items-center gap-2 z-30">
-          {[0, 1].map((i) => (
+          {slides.map((_, i) => (
             <button
               key={i}
-              onClick={() => setPage([page + (i > imageIndex ? 1 : -1), i > imageIndex ? 1 : -1])}
-              className={`h-2 rounded-full transition-all duration-300 ${imageIndex === i ? 'w-8 bg-seiomm-cyan-on-dark' : 'w-2 bg-white/40 hover:bg-white'}`}
+              onClick={() => {
+                const newDirection = i > imageIndex ? 1 : -1;
+                setPage(([currentPage]) => [
+                  currentPage + (i - imageIndex),
+                  newDirection
+                ]);
+              }}
+              className={`h-2 rounded-full transition-all duration-300 ${imageIndex === i
+                ? 'w-8 bg-seiomm-cyan-on-dark'
+                : 'w-2 bg-white/40 hover:bg-white'
+                }`}
               aria-label={`Ir a la diapositiva ${i + 1}`}
             />
           ))}
@@ -204,6 +226,119 @@ function SlideTwo() {
             <Link
               to="/congreso#programa"
               className="group link-underline flex items-center gap-2 font-medium transition-colors text-white/80 hover:text-white"
+            >
+              Ver programa
+              <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+function SlideThree() {
+  return (
+    <div className="relative w-full h-full flex items-center pt-24 md:pt-0">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-r from-seiomm-gray via-seiomm-gray to-transparent z-10 lg:w-2/3" />
+        <div className="absolute inset-y-0 right-0 w-full lg:w-2/3 h-full">
+          <img
+            src="/osteoporosis_main.webp"
+            alt="Estructura ósea"
+            className="w-full h-full object-cover object-center lg:object-right"
+            draggable={false}
+          />
+        </div>
+      </div>
+      <div className="relative z-20 max-w-7xl mx-auto px-6 w-full py-18 md:py-24 lg:py-32 pointer-events-none">
+        <div className="max-w-2xl pointer-events-auto">
+          <div className="flex items-center gap-3 mb-8">
+            <span className="w-2 h-2 rounded-full bg-seiomm-cyan" />
+            <span className="text-seiomm-mute font-mono text-xs font-semibold tracking-[0.2em] uppercase">
+              Conoce Seiomm
+            </span>
+          </div>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-seiomm-dark mb-8 select-none">
+            Impulsamos la ciencia<br />
+            para cuidar la<br />
+            <span className="text-seiomm-cyan relative">
+              salud ósea.
+            </span>
+          </h1>
+          <p className="text-seiomm-body text-lg md:text-xl leading-relaxed mb-10 max-w-xl font-light select-none">
+            SEIOMM reúne a profesionales comprometidos con la investigación, la
+            formación y la práctica clínica en el ámbito del metabolismo óseo y mineral.
+          </p>
+          <div className="flex flex-wrap items-center gap-6">
+            <Link
+              to="/quienes-somos"
+              className="group flex items-center gap-2 bg-seiomm-cyan text-white px-6 py-3 rounded-full font-medium hover:bg-seiomm-cyan-hover transition-all duration-300"
+            >
+              Conoce SEIOMM
+              <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+            <Link
+              to="https://socios.seiomm.org/register"
+              target="_blank"
+              className="group link-underline flex items-center gap-2 font-medium transition-colors text-seiomm-body hover:text-seiomm-dark"
+            >
+              Hazte socio
+              <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function SlideFour() {
+  return (
+    <div className="relative w-full h-full flex items-center pt-24 md:pt-0">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-r from-seiomm-gray via-seiomm-gray to-transparent z-10 lg:w-2/3" />
+        <div className="absolute inset-y-0 right-0 w-full lg:w-2/3 h-full">
+          <img
+            src="/poster-congreso.jpg"
+            alt="Comunidad"
+            className="w-full h-full object-cover object-center lg:object-right"
+            draggable={false}
+          />
+        </div>
+      </div>
+      <div className="relative z-20 max-w-7xl mx-auto px-6 w-full py-18 md:py-24 pointer-events-none">
+        <div className="max-w-3xl pointer-events-auto">
+          <div className="flex flex-wrap items-center gap-6 mb-8">
+            <div className="flex items-center gap-2 font-mono text-xs font-semibold tracking-[0.1em] uppercase">
+              <MapPin className="w-4 h-4 text-seiomm-cyan" />
+              <span className="text-seiomm-mute">Murcia</span>
+            </div>
+            <div className="flex items-center gap-2 font-mono text-xs font-semibold tracking-[0.1em] uppercase">
+              <Calendar className="w-4 h-4 text-seiomm-cyan" />
+              <span className="text-seiomm-mute">28-30 Octubre, 2026</span>
+            </div>
+          </div>
+
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-seiomm-dark mb-8 select-none">
+            XXX Congreso Nacional <span className="text-seiomm-cyan">SEIOMM</span>
+          </h1>
+
+          <p className="text-seiomm-body text-lg md:text-xl leading-relaxed mb-10 max-w-xl font-light select-none">
+            El encuentro anual de referencia en investigación, diagnóstico y tratamiento
+            de las enfermedades del metabolismo óseo y mineral.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-6">
+            <Link
+              to="/congreso#inscripciones"
+              className="group flex items-center gap-2 bg-seiomm-cyan text-white px-6 py-3 rounded-full font-medium hover:bg-seiomm-cyan-hover transition-all duration-300"
+            >
+              Inscripciones
+              <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+            <Link
+              to="/congreso#programa"
+              className="group link-underline flex items-center gap-2 font-medium transition-colors text-seiomm-body hover:text-seiomm-dark"
             >
               Ver programa
               <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

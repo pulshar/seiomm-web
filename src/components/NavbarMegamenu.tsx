@@ -42,6 +42,7 @@ const navItems = [
             { name: 'Becas', href: '#' },
             { name: 'Premios', href: '#' },
             { name: 'ROMM', href: '#' },
+            { name: 'Para pacientes', href: '/pacientes' },
         ]
     },
     {
@@ -376,7 +377,10 @@ export function Navbar() {
                                                         key={link.name}
                                                         to={link.href}
                                                         onClick={closeMenus}
-                                                        className="w-fit text-seiomm-dark hover:text-seiomm-cyan transition-colors font-medium text-[15px] flex items-center gap-2 py-1"
+                                                        className={`w-fit font-medium flex items-center gap-2 transition-colors ${link.name.toLowerCase().includes("paciente")
+                                                            ? "text-[14px] bg-seiomm-green text-white hover:bg-seiomm-green-hover px-5 py-1.5 rounded-full"
+                                                            : "text-[15px] text-seiomm-dark hover:text-seiomm-cyan py-1"
+                                                            }`}
                                                     >
                                                         {link.name}
                                                     </Link>
@@ -427,7 +431,10 @@ export function Navbar() {
                                                             key={link.name}
                                                             to={link.href}
                                                             onClick={closeMenus}
-                                                            className="text-base font-medium text-seiomm-body hover:text-seiomm-cyan transition-colors"
+                                                            className={`text-base font-medium flex items-center gap-2 transition-colors ${link.name.toLowerCase().includes("paciente")
+                                                                ? "w-fit bg-seiomm-green text-white hover:bg-seiomm-green-hover px-5 py-1.5 rounded-full"
+                                                                : "text-seiomm-body hover:text-seiomm-cyan"
+                                                                }`}
                                                         >
                                                             {link.name}
                                                         </Link>
