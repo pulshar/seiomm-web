@@ -169,7 +169,7 @@ export function QuickAccessSection() {
     const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
         // Allow native touch scrolling & CSS scroll snap on mobile/touch devices
         if (e.pointerType === 'touch') return;
-        if (e.button !== 0) return; // Only primary mouse button
+        if (e.pointerType !== 'mouse' || e.button !== 0) return;
 
         const slider = sliderRef.current;
         if (!slider) return;
@@ -370,12 +370,13 @@ export function QuickAccessSection() {
                     onPointerMove={handlePointerMove}
                     onPointerUp={handlePointerUp}
                     onPointerCancel={handlePointerUp}
-                    className={`w-full overflow-x-auto hide-scrollbar select-none py-2 touch-pan-x ${isDragging ? 'cursor-grabbing select-none' : 'snap-x snap-mandatory cursor-grab'
+                    className={`w-full overflow-x-auto hide-scrollbar select-none py-2 ${isDragging ? 'cursor-grabbing select-none' : 'snap-x snap-mandatory cursor-grab'
                         }`}
                     style={{
                         paddingLeft: `${leftPadding}px`,
                         paddingRight: `${leftPadding}px`,
-                        scrollPaddingLeft: `${leftPadding}px`
+                        scrollPaddingLeft: `${leftPadding}px`,
+                        touchAction: 'pan-x pan-y'
                     }}
                 >
                     <div className="flex border-t border-l border-seiomm-10 min-w-max">
