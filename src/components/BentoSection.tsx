@@ -30,7 +30,7 @@ export function BentoSection() {
           >
             <div className="absolute inset-0 bg-gray-200">
               <img
-                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2000&auto=format&fit=crop"
+                src="/images/congreso.webp"
                 alt="Congreso"
                 className="w-full h-full object-cover image-scale-hover"
               />
@@ -76,7 +76,7 @@ export function BentoSection() {
             >
               <div className="absolute inset-0 bg-gray-200">
                 <img
-                  src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?q=80&w=1000&auto=format&fit=crop"
+                  src="/images/curso.webp"
                   alt="Curso SEIOMM"
                   className="w-full h-full object-cover image-scale-hover"
                 />

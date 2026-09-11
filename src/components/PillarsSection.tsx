@@ -11,7 +11,7 @@ const pillars = [
     description: 'Investigación, proyectos, grupos, becas, premios y ROMM.',
     linkText: 'Explorar ciencia',
     href: '/ciencia',
-    image: 'https://images.unsplash.com/photo-1630959305790-4c956ce6c0b6?q=80&w=800&auto=format&fit=crop'
+    image: '/images/ciencia.webp'
   },
   {
     number: '02',
@@ -19,7 +19,7 @@ const pillars = [
     description: 'Cursos, congresos, ponencias y recursos para profesionales.',
     linkText: 'Ver formación',
     href: '/formacion',
-    image: 'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=800&auto=format&fit=crop'
+    image: '/images/speech.webp'
   },
   {
     number: '03',
@@ -27,7 +27,7 @@ const pillars = [
     description: 'Guías clínicas, documentos, herramientas y publicaciones.',
     linkText: 'Ver recursos',
     href: '/recursos',
-    image: 'https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=800&auto=format&fit=crop'
+    image: '/images/recursos.webp'
   },
   {
     number: '04',
@@ -35,7 +35,7 @@ const pillars = [
     description: 'Encuentra información fiable sobre osteoporosis y salud ósea.',
     linkText: 'Ver contenidos',
     href: '/pacientes',
-    image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&auto=format&fit=crop',
+    image: '/images/pacientes.webp',
     isPatient: true
   }
 ];
@@ -130,7 +130,7 @@ export function PillarsSection() {
 
                 {/* Layer 2: Image Reveal Overlay */}
                 {/* The clip-path starts as a small circle. On hover, it expands to cover the whole card. */}
-                <div className="absolute inset-0 z-10 flex flex-col px-6 py-10 md:px-10 md:py-12 [clip-path:circle(30px_at_80%_86%)] group-hover:[clip-path:circle(150%_at_85%_85%)] transition-[clip-path] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]">
+                <div className="absolute inset-0 z-10 flex flex-col px-6 py-10 md:px-10 md:py-12 [clip-path:circle(24px_at_86%_84%)] md:[clip-path:circle(30px_at_80%_86%)] group-hover:[clip-path:circle(150%_at_85%_85%)] transition-[clip-path] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]">
 
                   {/* Background Image inside the clipped layer */}
                   <div className="absolute inset-0 z-0">

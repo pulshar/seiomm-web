@@ -10,7 +10,7 @@ const navItems = [
         featured: {
             title: 'Conoce SEIOMM',
             desc: 'Nuestra historia, misión y la estructura organizativa de la sociedad.',
-            image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600&auto=format&fit=crop',
+            image: '/images/estetoscopio-laptop.webp',
             href: '/quienes-somos'
         },
         subLinks: [

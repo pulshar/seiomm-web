@@ -44,8 +44,8 @@ export function SponsorsMarquee() {
                                     <div
                                         className="w-full h-12 md:h-16 lg:h-20 bg-seiomm-mute/80 hover:bg-seiomm-dark transition-colors duration-300"
                                         style={{
-                                            WebkitMaskImage: `url(/patrocinadores-web/${sponsor.file})`,
-                                            maskImage: `url(/patrocinadores-web/${sponsor.file})`,
+                                            WebkitMaskImage: `url(/images/patrocinadores-web/${sponsor.file})`,
+                                            maskImage: `url(/images/patrocinadores-web/${sponsor.file})`,
                                             WebkitMaskSize: "contain",
                                             maskSize: "contain",
                                             WebkitMaskRepeat: "no-repeat",

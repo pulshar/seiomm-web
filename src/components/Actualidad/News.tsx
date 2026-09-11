@@ -88,8 +88,12 @@ export function News() {
     );
 
     return (
-        <section className="bg-seiomm-gray pb-20 md:pb-28 lg:pb-32 pt-[calc(4.5rem+75px)] md:pt-[calc(6rem+75px)] lg:pt-[calc(8rem+75px)] border-b border-seiomm-8">
-            <div className="max-w-7xl mx-auto px-6">
+        <section className="relative
+                bg-[url('/images/bgs/degradado-full.png')]
+                bg-cover bg-top bg-no-repeat
+                before:absolute before:inset-0
+                before:bg-seiomm-gray/75 bg-seiomm-gray pb-20 md:pb-28 lg:pb-32 pt-[calc(4.5rem+75px)] md:pt-[calc(6rem+75px)] lg:pt-[calc(8rem+75px)] border-b border-seiomm-8">
+            <div className="relative z-10 max-w-7xl mx-auto px-6">
 
                 {/* Header Section */}
                 <div className="mb-16">

@@ -10,7 +10,7 @@ export function CommunitySection() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-seiomm-darker/80 via-seiomm-darker/80 to-transparent z-10" />
         <img
-          src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop"
+          src="/images/congreso.webp"
           alt="Comunidad"
           className="w-full h-full object-cover opacity-40 saturate-50"
         />

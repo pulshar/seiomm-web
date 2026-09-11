@@ -5,8 +5,12 @@ import { Link } from 'react-router-dom';
 
 export function NoticiaSingle() {
     return (
-        <section className="bg-seiomm-gray pb-20 md:pb-28 lg:pb-32 pt-[calc(4.5rem+75px)] md:pt-[calc(6rem+75px)] lg:pt-[calc(8rem+75px)] border-b border-seiomm-8">
-            <div className="max-w-7xl mx-auto px-6">
+        <section className="relative
+                bg-[url('/images/bgs/degradado-full.png')]
+                bg-cover bg-top bg-no-repeat
+                before:absolute before:inset-0
+                before:bg-seiomm-gray/75 bg-seiomm-gray pb-20 md:pb-28 lg:pb-32 pt-[calc(4.5rem+75px)] md:pt-[calc(6rem+75px)] lg:pt-[calc(8rem+75px)] border-b border-seiomm-8">
+            <div className="relative z-10 max-w-7xl mx-auto px-6">
 
                 {/* Breadcrumb / Back */}
                 {/* <motion.div
@@ -56,7 +60,7 @@ export function NoticiaSingle() {
 
                         {/* Main Content (Left) */}
                         <div className="lg:col-span-8">
-                            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-sm mb-12">
+                            <div className="relative aspect-[16/9] w-full overflow-hidden mb-12">
                                 <img
                                     src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2000&auto=format&fit=crop"
                                     alt="Agencia de comunicación"
@@ -125,9 +129,9 @@ export function NoticiaSingle() {
                                 >
                                     <div className="absolute inset-0">
                                         <img
-                                            src="https://images.unsplash.com/photo-1486825586573-7131f7991bdd?q=80&w=800&auto=format&fit=crop"
+                                            src="/images/revista-romm.webp"
                                             alt="ROMM"
-                                            className="w-full h-full object-cover image-scale-hover opacity-90 grayscale group-hover:grayscale-0 transition-[filter] duration-700"
+                                            className="w-full h-full object-cover image-scale-hover opacity-90 grayscale-70 group-hover:grayscale-0 transition-[filter] duration-700"
                                         />
                                     </div>
                                     <div className="absolute inset-0 bg-gradient-to-t from-seiomm-darker/90 via-seiomm-darker/40 to-transparent" />
@@ -155,9 +159,9 @@ export function NoticiaSingle() {
                                 >
                                     <div className="absolute inset-0">
                                         <img
-                                            src="/Expo.jpg"
+                                            src="/images/Expo.webp"
                                             alt="Exposición Sin fisuras"
-                                            className="w-full h-full object-cover image-scale-hover opacity-50 mix-blend-multiply grayscale group-hover:grayscale-0 transition-[filter] duration-700"
+                                            className="w-full h-full object-cover image-scale-hover opacity-50  grayscale-70 group-hover:grayscale-0 transition-[filter] duration-700"
                                         />
                                     </div>
                                     <div className="absolute inset-0 bg-gradient-to-t from-seiomm-dark/90 via-seiomm-dark/50 to-transparent" />

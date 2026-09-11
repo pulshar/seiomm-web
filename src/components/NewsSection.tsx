@@ -37,10 +37,10 @@ const newsItems = [
 
 export function NewsSection() {
   return (
-    <section className="py-18 md:py-24 lg:py-32 bg-white">
+    <section className="py-18 md:py-24 lg:py-32 bg-white border-b border-seiomm-8">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeader
-          eyebrow="Ahora en SEIOMM"
+          eyebrow="Actualidad SEIOMM"
           title={
             <>Lo que merece la pena <span className="text-seiomm-cyan">conocer.</span></>
           }
@@ -60,7 +60,7 @@ export function NewsSection() {
           >
             <div className="absolute inset-0">
               <img
-                src="https://images.unsplash.com/photo-1486825586573-7131f7991bdd?q=80&w=1000&auto=format&fit=crop"
+                src="/images/revista-romm.webp"
                 alt="ROMM"
                 className="w-full h-full object-cover image-scale-hover opacity-90"
               />

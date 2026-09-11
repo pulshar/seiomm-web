@@ -16,7 +16,7 @@ export function CongressHero() {
           className="absolute inset-y-0 right-0 w-full lg:w-2/3 h-full"
         >
           <img
-            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop"
+            src="/images/congreso.webp"
             alt="Comunidad"
             className="w-full h-full object-cover opacity-40 saturate-50"
           />

@@ -16,6 +16,8 @@
   --color-seiomm-cyan-on-dark: #93C5FD;
   --color-seiomm-green: #95BB0C;
   --color-seiomm-green-hover: #83a60a;
+  --color-seiomm-yellow: #FFC614;
+  --color-seiomm-yellow-hover: #e6b410;
   --color-seiomm-gray: #F8FAFC;
   --color-seiomm-10: #e6e7e8;
   --color-seiomm-8: #ececee;
@@ -50,6 +52,15 @@
       width: 100%;
       justify-content: center;
     }
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 }
 

@@ -71,7 +71,7 @@ export function BoardSection() {
             >
               <div className="mb-6 overflow-hidden bg-seiomm-gray">
                 <img
-                  src={member.image}
+                  src={`/images/junta-directiva/${member.image}`}
                   alt={member.name}
                   className="aspect-[4/5] w-full object-cover grayscale transition-all duration-700 ease-out group-hover:scale-[1.03] group-hover:grayscale-0"
                 />

@@ -6,6 +6,9 @@ import { NewsSection } from '../components/NewsSection';
 import { CommunitySection } from '../components/CommunitySection';
 import { JoinSection } from '../components/JoinSection';
 import { SponsorsMarquee } from '../components/SponsorsWeb';
+import { BannersSection } from '../components/BannersSection';
+import { QuickAccessSection } from '../components/QuickAccessSection';
+// import { PatientCTASection } from '../components/PatientCTASection';
 
 export function Home() {
   useEffect(() => {
@@ -14,9 +17,12 @@ export function Home() {
   return (
     <main className="flex-grow">
       <Hero />
+      <QuickAccessSection />
       <BentoSection />
       <PillarsSection />
       <NewsSection />
+      {/* <PatientCTASection /> */}
+      <BannersSection />
       <CommunitySection />
       <SponsorsMarquee />
       <JoinSection />

@@ -92,7 +92,7 @@ export function Hero() {
       </AnimatePresence>
 
       {/* Slider Controls */}
-      <div className="absolute bottom-12 left-0 right-0 z-30 flex justify-center items-center gap-4">
+      <div className="absolute bottom-8 left-0 right-0 z-30 flex justify-center items-center gap-4">
         {/* <button onClick={() => paginate(-1)} className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white/60 hover:bg-white hover:text-seiomm-dark transition-colors z-30">
           <ChevronLeft className="w-5 h-5" />
         </button> */}
@@ -108,7 +108,7 @@ export function Hero() {
                 ]);
               }}
               className={`h-2 rounded-full transition-all duration-300 ${imageIndex === i
-                ? 'w-8 bg-seiomm-cyan-on-dark'
+                ? 'w-6 bg-seiomm-cyan-on-dark'
                 : 'w-2 bg-white/40 hover:bg-white'
                 }`}
               aria-label={`Ir a la diapositiva ${i + 1}`}
@@ -125,12 +125,12 @@ export function Hero() {
 
 function SlideOne() {
   return (
-    <div className="relative w-full h-full flex items-center pt-24 md:pt-0">
+    <div className="relative w-full h-full flex items-center pt-8 md:pt-0">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-r from-seiomm-darker via-seiomm-darker to-transparent z-10 lg:w-2/3" />
         <div className="absolute inset-y-0 right-0 w-full h-full">
           <img
-            src="/hero-bg.jpg"
+            src="/images/hero-bg.webp"
             alt="Estructura ósea"
             className="w-full h-full object-cover object-center lg:object-right"
             draggable={false}
@@ -159,7 +159,7 @@ function SlideOne() {
           <div className="flex flex-wrap items-center gap-6">
             <Link
               to="/quienes-somos"
-              className="group flex items-center gap-2 bg-seiomm-cyan-on-dark text-seiomm-dark px-6 py-3 rounded-full font-medium hover:bg-white transition-all duration-300"
+              className="group btn-w-100 flex items-center gap-2 bg-white text-seiomm-darker px-6 py-3 rounded-full font-medium hover:bg-seiomm-cyan-on-dark transition-all duration-300"
             >
               Conoce SEIOMM
               <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -167,7 +167,7 @@ function SlideOne() {
             <Link
               to="https://socios.seiomm.org/register"
               target="_blank"
-              className="group link-underline flex items-center gap-2 font-medium transition-colors text-white/80 hover:text-white"
+              className="group btn-w-100 link-underline flex items-center gap-2 font-medium transition-colors text-white/80 hover:text-white"
             >
               Hazte socio
               <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -181,12 +181,12 @@ function SlideOne() {
 
 function SlideTwo() {
   return (
-    <div className="relative w-full h-full flex items-center pt-24 md:pt-0">
+    <div className="relative w-full h-full flex items-center pt-8 md:pt-0">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-r from-seiomm-darker via-seiomm-darker/80 to-transparent z-10 lg:w-2/3" />
         <div className="absolute inset-y-0 right-0 w-full lg:w-2/3 h-full">
           <img
-            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop"
+            src="/images/congreso.webp"
             alt="Comunidad"
             className="w-full h-full object-cover opacity-40 saturate-50"
             draggable={false}
@@ -218,14 +218,14 @@ function SlideTwo() {
           <div className="flex flex-wrap items-center gap-6">
             <Link
               to="/congreso#inscripciones"
-              className="group flex items-center gap-2 bg-seiomm-cyan-on-dark text-seiomm-darker px-6 py-3 rounded-full font-medium hover:bg-white transition-all duration-300"
+              className="group btn-w-100 flex items-center gap-2 bg-white text-seiomm-darker px-6 py-3 rounded-full font-medium hover:bg-seiomm-cyan-on-dark transition-all duration-300"
             >
               Inscripciones
               <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
               to="/congreso#programa"
-              className="group link-underline flex items-center gap-2 font-medium transition-colors text-white/80 hover:text-white"
+              className="group btn-w-100 link-underline flex items-center gap-2 font-medium transition-colors text-white/80 hover:text-white"
             >
               Ver programa
               <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -238,12 +238,12 @@ function SlideTwo() {
 }
 function SlideThree() {
   return (
-    <div className="relative w-full h-full flex items-center pt-24 md:pt-0">
+    <div className="relative w-full h-full flex items-center pt-8 md:pt-0">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-r from-seiomm-gray via-seiomm-gray to-transparent z-10 lg:w-2/3" />
         <div className="absolute inset-y-0 right-0 w-full lg:w-2/3 h-full">
           <img
-            src="/osteoporosis_main.webp"
+            src="/images/osteoporosis_main.webp"
             alt="Estructura ósea"
             className="w-full h-full object-cover object-center lg:object-right"
             draggable={false}
@@ -294,12 +294,12 @@ function SlideThree() {
 
 function SlideFour() {
   return (
-    <div className="relative w-full h-full flex items-center pt-24 md:pt-0">
+    <div className="relative w-full h-full flex items-center pt-8 md:pt-0">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-r from-seiomm-gray via-seiomm-gray to-transparent z-10 lg:w-2/3" />
         <div className="absolute inset-y-0 right-0 w-full lg:w-2/3 h-full">
           <img
-            src="/poster-congreso.jpg"
+            src="/images/poster-congreso.webp"
             alt="Comunidad"
             className="w-full h-full object-cover object-center lg:object-right"
             draggable={false}
