@@ -366,7 +366,6 @@ export function QuickAccessSection() {
                 transition={{ duration: 0.6, delay: 0.3 }}>
                 <div
                     ref={sliderRef}
-                    data-lenis-prevent="true"
                     onPointerDown={handlePointerDown}
                     onPointerMove={handlePointerMove}
                     onPointerUp={handlePointerUp}

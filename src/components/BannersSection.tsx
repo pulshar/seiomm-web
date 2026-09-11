@@ -102,7 +102,6 @@ export function BannersSection() {
                 {/* Mobile: Scroll Snap Slider | Desktop: Grid */}
                 <div
                     ref={sliderRef}
-                    data-lenis-prevent="true"
                     className="flex overflow-x-auto md:grid md:grid-cols-3 gap-6 snap-x snap-mandatory hide-scrollbar pb-4 md:pb-0"
                 >
                     {banners.map((banner, index) => (
