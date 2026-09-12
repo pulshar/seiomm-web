@@ -398,14 +398,15 @@ export function QuickAccessSection() {
                                             <div className="w-11 h-11 rounded-full border border-seiomm-cyan/30 bg-seiomm-cyan/5 flex items-center justify-center text-seiomm-cyan transition-transform duration-300 group-hover:scale-105 group-hover:border-seiomm-cyan">
                                                 <item.icon className="w-5 h-5 stroke-[1.6]" />
                                             </div>
-                                            <h3 className="text-xl md:text-2xl font-serif font-normal text-seiomm-dark leading-snug group-hover:text-seiomm-cyan transition-colors duration-300">
-                                                {item.title}
-                                            </h3>
+
+                                            <span className="font-mono text-seiomm-mute text-xs uppercase">{item.category}</span>
 
                                         </div>
 
-                                        <div className="pt-4 flex items-end justify-between">
-                                            <span className="font-mono text-seiomm-mute text-xs uppercase">{item.category}</span>
+                                        <div className="pt-3 flex items-center justify-between">
+                                            <h3 className="text-xl md:text-2xl font-serif font-normal text-seiomm-dark leading-snug group-hover:text-seiomm-cyan transition-colors duration-300">
+                                                {item.title}
+                                            </h3>
                                             <div className="shrink-0 w-8 h-8 rounded-full border border-seiomm-dark/10 flex items-center justify-center text-seiomm-dark group-hover:bg-seiomm-cyan group-hover:border-seiomm-cyan group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1">
                                                 <ArrowRight className="w-3.5 h-3.5" />
                                             </div>
