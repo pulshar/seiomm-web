@@ -5,12 +5,12 @@ import 'lenis/dist/lenis.css';
 
 import { Navbar } from './components/NavbarMegamenu';
 import { Footer } from './components/Footer';
+import { Home } from './pages/Home';
 import { ScrollToTop } from './components/ScrollToTop';
 import { ScrollToHash } from './components/ScrollToHash';
-import { NoticiaSingle } from './components/Actualidad/NoticiaSingle';
 
 // Route-level code splitting: loads chunks on-demand, reducing initial bundle size
-const Home = lazy(() => import('./pages/Home').then((m) => ({ default: m.Home })));
+// const Home = lazy(() => import('./pages/Home').then((m) => ({ default: m.Home })));
 const About = lazy(() => import('./pages/About').then((m) => ({ default: m.About })));
 const Congress = lazy(() => import('./pages/Congress').then((m) => ({ default: m.Congress })));
 const VentajasSocio = lazy(() => import('./pages/VentajasSocio').then((m) => ({ default: m.VentajasSocio })));
@@ -18,6 +18,8 @@ const Ciencia = lazy(() => import('./pages/Ciencia').then((m) => ({ default: m.C
 const Formacion = lazy(() => import('./pages/Formacion').then((m) => ({ default: m.Formacion })));
 const Recursos = lazy(() => import('./pages/Recursos').then((m) => ({ default: m.Recursos })));
 const Actualidad = lazy(() => import('./pages/Actualidad').then((m) => ({ default: m.Actualidad })));
+const Pacientes = lazy(() => import('./pages/Pacientes').then((m) => ({ default: m.Pacientes })));
+const NoticiaSingle = lazy(() => import('./components/Actualidad/NoticiaSingle').then((m) => ({ default: m.NoticiaSingle })));
 
 // Typed window interface using Omit to cleanly override the ambient lenis definition
 type WindowWithLenis = Omit<Window, 'lenis'> & {
@@ -96,6 +98,7 @@ export default function App() {
             <Route path="/recursos" element={<Recursos />} />
             <Route path="/actualidad" element={<Actualidad />} />
             <Route path="/actualidad/noticia-ejemplo" element={<NoticiaSingle />} />
+            <Route path="/pacientes" element={<Pacientes />} />
           </Routes>
 
 
