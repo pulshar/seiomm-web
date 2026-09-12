@@ -76,7 +76,7 @@ export function VentajasGrid() {
               >
                 <div>
                   {/* Icon Circle */}
-                  <div className="w-11 h-11 rounded-full border border-seiomm-cyan/30 bg-seiomm-cyan/5 flex items-center justify-center text-seiomm-cyan mb-8 transition-transform duration-300 group-hover:scale-105 group-hover:border-seiomm-cyan">
+                  <div className="w-11 h-11 rounded-full border border-seiomm-cyan/30 bg-seiomm-cyan/5 flex items-center justify-center text-seiomm-cyan mb-8 transition-all duration-300 group-hover:scale-105 group-hover:border-seiomm-cyan">
                     <Icon className="w-5 h-5 stroke-[1.6]" />
                   </div>
 
