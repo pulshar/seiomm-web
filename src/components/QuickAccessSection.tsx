@@ -395,7 +395,7 @@ export function QuickAccessSection() {
                                     {/* Exact requested card structure */}
                                     <div className="group relative p-6 md:p-10 border-r border-b border-seiomm-10 flex flex-col justify-between transition-colors duration-300 hover:bg-seiomm-gray/50 h-full bg-white">
                                         <div className="h-full flex flex-col justify-between">
-                                            <div className="w-11 h-11 rounded-full border border-seiomm-cyan/30 bg-seiomm-cyan/5 flex items-center justify-center text-seiomm-cyan transition-transform duration-300 group-hover:scale-105 group-hover:border-seiomm-cyan">
+                                            <div className="w-11 h-11 rounded-full border border-seiomm-cyan/30 bg-seiomm-cyan/5 flex items-center justify-center text-seiomm-cyan transition-transform duration-300 group-hover:border-seiomm-cyan">
                                                 <item.icon className="w-5 h-5 stroke-[1.6]" />
                                             </div>
 
