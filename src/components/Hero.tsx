@@ -198,11 +198,11 @@ function SlideTwo() {
           <div className="flex flex-wrap items-center gap-6 mb-8">
             <div className="flex items-center gap-2 font-mono text-xs font-semibold tracking-[0.1em] uppercase">
               <MapPin className="w-4 h-4 text-seiomm-cyan-on-dark" />
-              <span className="text-white/80">Murcia</span>
+              <span className="text-seiomm-mute">Murcia</span>
             </div>
             <div className="flex items-center gap-2 font-mono text-xs font-semibold tracking-[0.1em] uppercase">
               <Calendar className="w-4 h-4 text-seiomm-cyan-on-dark" />
-              <span className="text-white/80">28-30 Octubre, 2026</span>
+              <span className="text-seiomm-mute">28-30 Octubre, 2026</span>
             </div>
           </div>
 
