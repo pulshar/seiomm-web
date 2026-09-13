@@ -57,7 +57,7 @@ export function JoinSectionDarkBg() {
               <Link
                 to="https://socios.seiomm.org/register"
                 target='_blank'
-                className="link-underline group btn-w-100 flex items-center gap-2 text-white/80 hover:text-white font-medium text-sm transition-colors"
+                className="group link-underline btn-w-100 flex items-center gap-2 text-white/80 hover:text-white font-medium text-sm transition-colors"
               >
                 Solicitar el alta
                 <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

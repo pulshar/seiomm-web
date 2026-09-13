@@ -75,7 +75,7 @@ export function CongressHero() {
             </a>
             <a
               href="#programa"
-              className="group btn-w-100 link-underline flex items-center gap-2 font-medium transition-colors text-white/80 hover:text-white"
+              className="group link-underline btn-w-100 flex items-center gap-2 font-medium transition-colors text-white/80 hover:text-white"
             >
               Ver programa
               <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

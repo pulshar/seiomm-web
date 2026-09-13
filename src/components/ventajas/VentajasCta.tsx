@@ -56,7 +56,7 @@ export function VentajasCta() {
               </Link>
               <Link
                 to="/quienes-somos"
-                className="link-underline group btn-w-100 flex items-center gap-2 text-white/80 hover:text-white font-medium text-sm transition-colors"
+                className="group link-underline btn-w-100 flex items-center gap-2 text-white/80 hover:text-white font-medium text-sm transition-colors"
               >
                 Conoce la sociedad
                 <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

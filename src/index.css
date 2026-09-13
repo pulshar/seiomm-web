@@ -87,6 +87,13 @@
     transform-origin: left;
   }
 
+  @media (max-width: 412px) {
+    .link-underline.btn-w-100 {
+      width: auto !important;
+      margin-inline: auto;
+    }
+  }
+
   .animate-marquee-infinite {
     animation: marquee-infinite 80s linear infinite;
   }
