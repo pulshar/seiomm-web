@@ -231,9 +231,14 @@ export function Navbar() {
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 120);
+            const isMobile = window.innerWidth < 768;
+            const threshold = isMobile ? 20 : 90;
+
+            setIsScrolled(window.scrollY > threshold);
         };
+
         window.addEventListener('scroll', handleScroll);
+
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
