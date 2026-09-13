@@ -58,7 +58,7 @@ export function Hero() {
       paginate(1);
     }, 8000);
     return () => clearInterval(timer);
-  }, [paginate]);
+  }, [page, paginate]);
 
   return (
     <section className="relative min-h-screen bg-seiomm-dark overflow-hidden flex items-center justify-center">
