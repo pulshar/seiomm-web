@@ -71,7 +71,7 @@ export function BentoSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
               className="group relative overflow-hidden flex-1 min-h-[240px] flex flex-col justify-end p-8"
             >
               <div className="absolute inset-0 bg-gray-200">
@@ -107,7 +107,7 @@ export function BentoSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               className="group relative overflow-hidden flex-1 min-h-[240px] flex flex-col justify-end p-8 bg-seiomm-cyan"
             >
               <div className="absolute inset-0 opacity-15 pointer-events-none overflow-hidden flex items-center justify-center"
