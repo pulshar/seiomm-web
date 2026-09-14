@@ -21,7 +21,7 @@ export function SectionHeader({ eyebrow, title, fontLight = false, description, 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className={`flex items-center gap-3 mb-6 ${centered ? 'justify-center' : ''}`}
         >
@@ -34,7 +34,7 @@ export function SectionHeader({ eyebrow, title, fontLight = false, description, 
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className={`text-4xl md:text-5xl font-serif ${fontLight ? 'font-light' : 'font-normal'} ${isDark ? 'text-white' : 'text-seiomm-dark'}`}
         >
@@ -46,7 +46,7 @@ export function SectionHeader({ eyebrow, title, fontLight = false, description, 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className={`${isDark ? 'text-white/80' : 'text-seiomm-body'} max-w-md text-sm md:text-base leading-relaxed lg:pb-2`}
         >

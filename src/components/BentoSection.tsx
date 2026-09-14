@@ -24,7 +24,7 @@ export function BentoSection() {
             to="/congreso"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="group relative overflow-hidden min-h-[400px] lg:min-h-[500px] flex flex-col justify-end p-8"
           >
@@ -70,7 +70,7 @@ export function BentoSection() {
               to="/formacion"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="group relative overflow-hidden flex-1 min-h-[240px] flex flex-col justify-end p-8"
             >
@@ -106,7 +106,7 @@ export function BentoSection() {
               to="/ciencia"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="group relative overflow-hidden flex-1 min-h-[240px] flex flex-col justify-end p-8 bg-seiomm-cyan"
             >

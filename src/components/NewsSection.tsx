@@ -54,7 +54,7 @@ export function NewsSection() {
             target='_blank'
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="group relative overflow-hidden min-h-[300px] lg:min-h-[660px] flex flex-col justify-between p-8 bg-gray-100"
           >
@@ -95,7 +95,7 @@ export function NewsSection() {
                   to="/actualidad/noticia-ejemplo"
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="group flex items-center justify-between gap-6 py-8 border-b border-seiomm-10 transition-colors"
                 >

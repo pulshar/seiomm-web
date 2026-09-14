@@ -8,7 +8,7 @@ export function MissionVision() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-16"
         >
@@ -25,7 +25,7 @@ export function MissionVision() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <h3 className="text-3xl font-serif font-normal text-seiomm-dark mb-6">Nuestra misión</h3>
@@ -37,7 +37,7 @@ export function MissionVision() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h3 className="text-3xl font-serif font-normal  text-seiomm-dark mb-6">Nuestra visión</h3>

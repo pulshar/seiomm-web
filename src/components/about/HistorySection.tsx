@@ -39,7 +39,7 @@ export function HistorySection() {
                 key={item.year}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex flex-col md:flex-row gap-6 md:gap-12 py-8 md:py-12 border-b border-seiomm-10 group"
               >
@@ -60,7 +60,7 @@ export function HistorySection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-12 md:mt-16"
           >

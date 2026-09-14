@@ -296,7 +296,7 @@ export function QuickAccessSection() {
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
+                            viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                             className="flex items-center gap-3 mb-6"
                         >
@@ -309,7 +309,7 @@ export function QuickAccessSection() {
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
+                            viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.1 }}
                             className="text-4xl md:text-5xl font-serif font-normal text-seiomm-dark leading-tight"
                         >
@@ -322,7 +322,7 @@ export function QuickAccessSection() {
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
+                            viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                             className="text-seiomm-body text-sm md:text-base leading-relaxed"
                         >
@@ -362,7 +362,7 @@ export function QuickAccessSection() {
             <motion.div className="w-full relative"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}>
                 <div
                     ref={sliderRef}

@@ -56,7 +56,7 @@ export function ValuesSection() {
               key={value.number}
               initial={{ opacity: 0, scale: 0.98 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-seiomm-gray flex flex-col p-6 md:p-10 group transition-colors duration-500 hover:bg-white"
             >
@@ -74,7 +74,7 @@ export function ValuesSection() {
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: values.length * 0.1 }}
             className="bg-seiomm-cyan flex flex-col p-6 md:p-10 text-seiomm-darker"
           >
