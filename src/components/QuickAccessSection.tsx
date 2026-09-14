@@ -8,7 +8,7 @@ import {
     ClipboardList,
     Activity,
     Microscope,
-    Wrench,
+    PencilRuler,
     CalendarDays,
     Users,
     Mic,
@@ -72,7 +72,7 @@ const quickLinks: QuickLinkItem[] = [
         id: 'herramientas',
         title: 'Herramientas',
         category: 'Utilidades',
-        icon: Wrench,
+        icon: PencilRuler,
         href: '#'
     },
     {
