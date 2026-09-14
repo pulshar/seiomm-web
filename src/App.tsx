@@ -7,7 +7,7 @@ import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { ScrollToTop } from './components/ScrollToTop';
 import { ScrollToHash } from './components/ScrollToHash';
-import NavBarAlt from './components/NavbarMegaMenuAlt';
+import { Navbar } from './components/NavbarMegamenu';
 
 // Route-level code splitting: loads chunks on-demand, reducing initial bundle size
 // const Home = lazy(() => import('./pages/Home').then((m) => ({ default: m.Home })));
@@ -86,7 +86,7 @@ export default function App() {
       <ScrollToTop />
       <ScrollToHash />
       <div className="min-h-screen flex flex-col">
-        <NavBarAlt />
+        <Navbar />
         <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path="/" element={<Home />} />
