@@ -50,7 +50,7 @@ export function RecursosCta() {
 
             <div className="flex flex-wrap items-center gap-6">
               <Link
-                to="/formacion"
+                to="#"
                 className="group btn-w-100 flex items-center gap-2 bg-white text-seiomm-dark text-sm px-6 py-3 rounded-full font-medium hover:bg-seiomm-cyan-on-dark transition-all duration-300"
               >
                 Ver formación

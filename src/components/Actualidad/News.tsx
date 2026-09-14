@@ -10,7 +10,8 @@ const categories = [
     'Actividades Avaladas',
     'Casos Clínicos',
     'Congresos SEIOMM',
-    'Cursos SEIOMM'
+    'Cursos SEIOMM',
+    'Salud ósea'
 ];
 
 const allNews = [

@@ -10,7 +10,7 @@ const pillars = [
     title: 'Ciencia',
     description: 'Investigación, proyectos, grupos, becas, premios y ROMM.',
     linkText: 'Explorar ciencia',
-    href: '/ciencia',
+    href: '#',
     image: '/images/ciencia.webp'
   },
   {
@@ -18,7 +18,7 @@ const pillars = [
     title: 'Formación',
     description: 'Cursos, congresos, ponencias y recursos para profesionales.',
     linkText: 'Ver formación',
-    href: '/formacion',
+    href: '#',
     image: '/images/speech.webp'
   },
   {
@@ -26,7 +26,7 @@ const pillars = [
     title: 'Recursos',
     description: 'Guías clínicas, documentos, herramientas y publicaciones.',
     linkText: 'Ver recursos',
-    href: '/recursos',
+    href: '#',
     image: '/images/recursos.webp'
   },
   {
@@ -34,7 +34,7 @@ const pillars = [
     title: '¿Eres paciente?',
     description: 'Encuentra información fiable sobre osteoporosis y salud ósea.',
     linkText: 'Ver contenidos',
-    href: '/pacientes',
+    href: '#',
     image: '/images/pacientes.webp',
     isPatient: true
   }

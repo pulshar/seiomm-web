@@ -54,7 +54,7 @@ export function JoinSection() {
                 <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
-                to="/ventajas-socio"
+                to="#"
                 className="group link-underline btn-w-100 flex items-center gap-2 text-seiomm-dark font-medium text-sm"
               >
                 Conoce las ventajas

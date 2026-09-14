@@ -67,7 +67,7 @@ export function BentoSection() {
           <div className="flex flex-col gap-6">
             {/* Top Right Card */}
             <MotionLink
-              to="/formacion"
+              to="#"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -103,7 +103,7 @@ export function BentoSection() {
 
             {/* Bottom Right Card */}
             <MotionLink
-              to="/ciencia"
+              to="#"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

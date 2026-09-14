@@ -3,11 +3,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Lenis from 'lenis';
 import 'lenis/dist/lenis.css';
 
-import { Navbar } from './components/NavbarMegamenu';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { ScrollToTop } from './components/ScrollToTop';
 import { ScrollToHash } from './components/ScrollToHash';
+import NavBarAlt from './components/NavbarMegaMenuAlt';
 
 // Route-level code splitting: loads chunks on-demand, reducing initial bundle size
 // const Home = lazy(() => import('./pages/Home').then((m) => ({ default: m.Home })));
@@ -86,7 +86,7 @@ export default function App() {
       <ScrollToTop />
       <ScrollToHash />
       <div className="min-h-screen flex flex-col">
-        <Navbar />
+        <NavBarAlt />
         <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path="/" element={<Home />} />

@@ -123,7 +123,7 @@ export function Footer() {
               <ul className="flex flex-col gap-2">
                 <li><Link to="/quienes-somos" className="text-white/60 hover:text-white text-sm transition-colors">Quiénes somos</Link></li>
                 <li><Link to="/quienes-somos#junta-directiva" className="text-white/60 hover:text-white text-sm transition-colors">Junta directiva</Link></li>
-                <li><Link to="/ciencia" className="text-white/60 hover:text-white text-sm transition-colors">Ciencia e investigación</Link></li>
+                <li><Link to="#" className="text-white/60 hover:text-white text-sm transition-colors">Ciencia e investigación</Link></li>
                 <li><Link to="#" className="text-white/60 hover:text-white text-sm transition-colors">Estatutos</Link></li>
               </ul>
             </div>
@@ -132,17 +132,17 @@ export function Footer() {
               <h4 className="text-seiomm-cyan-on-dark font-mono text-xs font-semibold tracking-[0.2em] uppercase">Actividad</h4>
               <ul className="flex flex-col gap-2">
                 <li><Link to="/congreso" className="text-white/60 hover:text-white text-sm transition-colors">Congreso Nacional</Link></li>
-                <li><Link to="/formacion" className="text-white/60 hover:text-white text-sm transition-colors">Cursos y formación</Link></li>
-                <li><Link to="/ciencia" className="text-white/60 hover:text-white text-sm transition-colors">Becas y premios</Link></li>
-                <li><Link to="/ciencia" className="text-white/60 hover:text-white text-sm transition-colors">Revista ROMM</Link></li>
+                <li><Link to="#" className="text-white/60 hover:text-white text-sm transition-colors">Cursos y formación</Link></li>
+                <li><Link to="#" className="text-white/60 hover:text-white text-sm transition-colors">Becas y premios</Link></li>
+                <li><Link to="#" className="text-white/60 hover:text-white text-sm transition-colors">Revista ROMM</Link></li>
               </ul>
             </div>
 
             <div className="flex flex-col gap-6">
               <h4 className="text-seiomm-cyan-on-dark font-mono text-xs font-semibold tracking-[0.2em] uppercase">Recursos</h4>
               <ul className="flex flex-col gap-2">
-                <li><Link to="/recursos" className="text-white/60 hover:text-white text-sm transition-colors">Guías clínicas</Link></li>
-                <li><Link to="/ventajas-socio" className="text-white/60 hover:text-white text-sm transition-colors">Ventajas de ser socio</Link></li>
+                <li><Link to="#" className="text-white/60 hover:text-white text-sm transition-colors">Guías clínicas</Link></li>
+                <li><Link to="#" className="text-white/60 hover:text-white text-sm transition-colors">Ventajas de ser socio</Link></li>
                 <li><Link to="https://socios.seiomm.org/register"
                   target='_blank' className="text-white/60 hover:text-white text-sm transition-colors">Hazte socio</Link></li>
                 <li><Link to="/actualidad" className="text-white/60 hover:text-white text-sm transition-colors">Actualidad</Link></li>
