@@ -56,7 +56,7 @@ const quickLinks: QuickLinkItem[] = [
     },
     {
         id: 'investigacion',
-        title: 'Investigación y Becas',
+        title: 'Investigación',
         category: 'I+D+i',
         icon: Microscope,
         href: '#'
@@ -66,6 +66,13 @@ const quickLinks: QuickLinkItem[] = [
         title: 'Revista ROMM',
         category: 'Publicación oficial',
         icon: BookOpen,
+        href: '#'
+    },
+    {
+        id: 'herramientas',
+        title: 'Herramientas',
+        category: 'Utilidades',
+        icon: Wrench,
         href: '#'
     },
     {
