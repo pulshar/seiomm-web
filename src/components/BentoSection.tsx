@@ -91,7 +91,8 @@ export function BentoSection() {
                       Curso SEIOMM
                     </h3>
                     <p className="text-white/80 text-sm">
-                      Osteoporosis y otras enfermedades<br />metabólicas óseas
+                      Osteoporosis y otras enfermedades{' '}
+                      <br className="hidden md:block" />metabólicas óseas
                     </p>
                   </div>
                   <div className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white backdrop-blur-sm group-hover:bg-white group-hover:text-seiomm-dark transition-all duration-300 flex-shrink-0">

@@ -107,7 +107,6 @@ export function NoticiaSingle() {
                                     <div className="flex flex-wrap items-center gap-6">
                                         <Link
                                             to="/actualidad"
-                                            target='_blank'
                                             className="group link-underline to-l flex items-center gap-2 font-medium transition-colors text-sm text-seiomm-dark"
                                         >
                                             <MoveLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
@@ -115,7 +114,7 @@ export function NoticiaSingle() {
                                         </Link>
                                     </div>
                                     <div className="group flex items-center gap-4">
-                                        <span className="text-sm font-medium text-seiomm-mute group-hover:text-seiomm-dark transition-colors duration-300">Compartir artículo</span>
+                                        <span className="text-sm font-medium text-seiomm-mute group-hover:text-seiomm-dark transition-colors duration-300">Compartir</span>
                                         <button className="w-10 h-10 rounded-full border border-seiomm-border flex items-center justify-center text-seiomm-mute group-hover:text-white group-hover:bg-seiomm-dark group-hover:border-seiomm-dark transition-all duration-300">
                                             <Share2 className="w-4 h-4" />
                                         </button>

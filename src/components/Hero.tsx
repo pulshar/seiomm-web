@@ -28,7 +28,7 @@ const variants = {
 const slides = [
   <SlideOne />,
   <SlideTwo />,
-  // <SlideThree />,
+  <SlideThree />,
   // <SlideFour />
 ];
 
@@ -108,7 +108,9 @@ export function Hero() {
                 ]);
               }}
               className={`h-2 rounded-full transition-all duration-300 ${imageIndex === i
-                ? 'w-6 bg-seiomm-cyan-on-dark'
+                ? i === 2
+                  ? 'w-6 bg-seiomm-green'
+                  : 'w-6 bg-seiomm-cyan-on-dark'
                 : 'w-2 bg-white/40 hover:bg-white'
                 }`}
               aria-label={`Ir a la diapositiva ${i + 1}`}
@@ -146,8 +148,10 @@ function SlideOne() {
             </span>
           </div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-8 select-none">
-            Impulsamos la ciencia<br />
-            para cuidar la<br />
+            Impulsamos la ciencia {' '}
+            <br className="hidden md:block" />
+            para cuidar la {' '}
+            <br className="hidden md:block" />
             <span className="text-seiomm-cyan-on-dark relative">
               salud ósea.
             </span>
@@ -240,12 +244,12 @@ function SlideThree() {
   return (
     <div className="relative w-full h-full flex items-center pt-8 md:pt-0">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-r from-seiomm-gray via-seiomm-gray to-transparent z-10 lg:w-2/3" />
-        <div className="absolute inset-y-0 right-0 w-full lg:w-2/3 h-full">
+        <div className="absolute inset-0 bg-gradient-to-r from-seiomm-darker via-seiomm-darker/80 to-transparent z-10 lg:w-2/3" />
+        <div className="absolute inset-y-0 right-0 w-full h-full">
           <img
-            src="/images/osteoporosis_main.webp"
+            src="/images/pacientes-large.webp"
             alt="Estructura ósea"
-            className="w-full h-full object-cover object-center lg:object-right"
+            className="w-full h-full object-cover opacity-80 saturate-80 object-center object-right"
             draggable={false}
           />
         </div>
@@ -253,36 +257,26 @@ function SlideThree() {
       <div className="relative z-20 max-w-7xl mx-auto px-6 w-full py-18 md:py-24 lg:py-32 pointer-events-none">
         <div className="max-w-2xl pointer-events-auto">
           <div className="flex items-center gap-3 mb-8">
-            <span className="w-2 h-2 rounded-full bg-seiomm-cyan" />
+            <span className="w-2 h-2 rounded-full bg-seiomm-green" />
             <span className="text-seiomm-mute font-mono text-xs font-semibold tracking-[0.2em] uppercase">
-              Conoce Seiomm
+              Para Pacientes
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-seiomm-dark mb-8 select-none">
-            Impulsamos la ciencia<br />
-            para cuidar la<br />
-            <span className="text-seiomm-cyan relative">
-              salud ósea.
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-8 select-none">
+            Información fiable para {' '}
+            <span className="text-seiomm-green relative">
+              tu salud ósea.
             </span>
           </h1>
-          <p className="text-seiomm-body text-lg md:text-xl leading-relaxed mb-10 max-w-xl font-light select-none">
-            SEIOMM reúne a profesionales comprometidos con la investigación, la
-            formación y la práctica clínica en el ámbito del metabolismo óseo y mineral.
+          <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-10 max-w-xl font-light select-none">
+            Encuentra guías prácticas, recomendaciones validadas por especialistas y respuestas claras a tus dudas sobre osteoporosis y enfermedades metabólicas óseas.
           </p>
           <div className="flex flex-wrap items-center gap-6">
             <Link
-              to="/quienes-somos"
-              className="group flex items-center gap-2 bg-seiomm-cyan text-white px-6 py-3 rounded-full font-medium hover:bg-seiomm-cyan-hover transition-all duration-300"
+              to="#"
+              className="group btn-w-100 flex items-center gap-2 bg-white text-seiomm-darker px-6 py-3 rounded-full font-medium hover:bg-seiomm-green transition-all duration-300"
             >
-              Conoce SEIOMM
-              <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-            <Link
-              to="https://socios.seiomm.org/register"
-              target="_blank"
-              className="group link-underline flex items-center gap-2 font-medium transition-colors text-seiomm-body hover:text-seiomm-dark"
-            >
-              Hazte socio
+              Más Información
               <MoveRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>

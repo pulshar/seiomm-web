@@ -320,7 +320,8 @@ export function QuickAccessSection() {
                             transition={{ duration: 0.6, delay: 0.1 }}
                             className="text-4xl md:text-5xl font-serif font-normal text-seiomm-dark leading-tight"
                         >
-                            Todo lo que necesitas,<br />
+                            Todo lo que necesitas,{' '}
+                            <br className="hidden md:block" />
                             <span className="text-seiomm-cyan">a tu alcance.</span>
                         </motion.h2>
                     </div>
