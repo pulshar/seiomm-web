@@ -126,7 +126,7 @@ export const navigationTabs: TabConfig[] = [
         icon: Stethoscope,
         featured: {
             title: 'Espacio científico y clínico',
-            desc: 'Cursos acreditados, guías de práctica clínica, el Congreso Nacional SEIOMM y la revista ROMM en acceso abierto.',
+            desc: 'Cursos acreditados, guías de práctica clínica, el Congreso Nacional SEIOMM y la revista ROMM de acceso abierto.',
             tag: 'Práctica médica',
             image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=600&auto=format&fit=crop',
             href: '/congreso',
@@ -137,7 +137,7 @@ export const navigationTabs: TabConfig[] = [
                 title: 'Investigación',
                 icon: Microscope,
                 links: [
-                    { name: 'Revista ROMM', href: '/actualidad', isNew: false, description: 'Revista oficial indexada de metabolismo mineral' },
+                    { name: 'Revista ROMM', href: '/actualidad', isNew: false, description: 'Revista oficial de acceso abierto' },
                     { name: 'Registro REFRA', href: '/actualidad', description: 'Registro nacional de fracturas osteoporóticas' },
                     { name: 'Proyectos y becas SEIOMM', href: '/actualidad', description: 'Financiación e impulso investigador' },
                     { name: 'Premios a la investigación', href: '/actualidad', description: 'Reconocimiento a tesis y comunicaciones' }
@@ -575,7 +575,7 @@ export function NavBarAlt({ onSwitchToOriginal }: NavBarAltProps) {
                                                                 )}
                                                             </div>
                                                             {link.description && (
-                                                                <p className="text-xs text-seiomm-mute leading-relaxed mt-0.5">
+                                                                <p className="text-xs text-seiomm-mute leading-relaxed mt-0.5 tracking-[0.1px]">
                                                                     {link.description}
                                                                 </p>
                                                             )}
@@ -595,7 +595,7 @@ export function NavBarAlt({ onSwitchToOriginal }: NavBarAltProps) {
                                             <h4 className="text-xl font-serif font-normal text-seiomm-dark mb-1.5">
                                                 {activeTabConfig.featured.title}
                                             </h4>
-                                            <p className="text-xs text-seiomm-mute leading-relaxed mb-4">
+                                            <p className="text-xs text-seiomm-mute leading-relaxed mb-4 tracking-[0.1px] text-pretty">
                                                 {activeTabConfig.featured.desc}
                                             </p>
 

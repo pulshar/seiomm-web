@@ -87,6 +87,15 @@
     transform-origin: left;
   }
 
+  .link-underline.to-l::after {
+    right: 0;
+    transform-origin: left;
+  }
+
+  .link-underline.to-l:hover::after {
+    transform-origin: right;
+  }
+
   @media (max-width: 412px) {
     .link-underline.btn-w-100 {
       width: auto !important;

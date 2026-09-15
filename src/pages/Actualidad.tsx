@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { News } from '../components/Actualidad/News';
+import { MarqueeSection } from '../components/MarqueeSection';
+import { JoinSectionDarkBg } from '../components/JoinSectionDarkBg';
 
 
 export function Actualidad() {
@@ -10,6 +12,8 @@ export function Actualidad() {
   return (
     <main className="flex-grow">
       <News />
+      <MarqueeSection />
+      <JoinSectionDarkBg />
     </main>
   );
 }
